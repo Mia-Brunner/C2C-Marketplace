@@ -1,0 +1,10 @@
+<h1><%= @listing.name %></h1>
+<h3><%= @listing.breed %></h3>
+<h3><%= @listing.price %></h3>
+<p><%= @listing.documentation %></p>
+<p><%= @listing.description%></p>
+
+<%= link_to 'Seller info', user_path(@listing.user_id)  %>
+<%= link_to 'SHOW PROFILE', user_profile_path  %>
+
+<%= link_to 'Back', listings_path %>
