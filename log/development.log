@@ -139,3 +139,60 @@ Processing by ListingsController#index as HTML
 Completed 200 OK in 28ms (Views: 21.6ms | ActiveRecord: 2.3ms | Allocations: 7145)
 
 
+Started GET "/" for ::1 at 2020-03-03 17:40:22 +1100
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+SyntaxError (/Users/tx/Code/C2C-Marketplace/app/controllers/listings_controller.rb:50: syntax error, unexpected end-of-input, expecting keyword_end):
+  
+app/controllers/listings_controller.rb:50: syntax error, unexpected end-of-input, expecting keyword_end
+app/controllers/listings_controller.rb:50: syntax error, unexpected end-of-input, expecting keyword_end
+app/controllers/listings_controller.rb:50: syntax error, unexpected end-of-input, expecting keyword_end
+Started GET "/" for ::1 at 2020-03-03 17:40:35 +1100
+Processing by ListingsController#index as HTML
+  Rendering listings/index.html.erb within layouts/application
+  [1m[36mListing Load (1.0ms)[0m  [1m[34mSELECT "listings".* FROM "listings"[0m
+  ↳ app/views/listings/index.html.erb:4
+  Rendered listings/index.html.erb within layouts/application (Duration: 6.8ms | Allocations: 1594)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 41ms (Views: 33.7ms | ActiveRecord: 3.7ms | Allocations: 9668)
+
+
+Started GET "/" for ::1 at 2020-03-03 17:44:18 +1100
+Processing by ListingsController#index as HTML
+  Rendering listings/index.html.erb within layouts/application
+  [1m[36mListing Load (0.6ms)[0m  [1m[34mSELECT "listings".* FROM "listings"[0m
+  ↳ app/views/listings/index.html.erb:4
+  Rendered listings/index.html.erb within layouts/application (Duration: 6.2ms | Allocations: 903)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 51ms (Views: 43.1ms | ActiveRecord: 0.6ms | Allocations: 6308)
+
+
+Started GET "/" for ::1 at 2020-03-03 17:44:28 +1100
+Processing by ListingsController#index as HTML
+  Rendering listings/index.html.erb within layouts/application
+  [1m[36mListing Load (1.0ms)[0m  [1m[34mSELECT "listings".* FROM "listings"[0m
+  ↳ app/views/listings/index.html.erb:4
+  Rendered listings/index.html.erb within layouts/application (Duration: 6.6ms | Allocations: 891)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 45ms (Views: 40.3ms | ActiveRecord: 1.0ms | Allocations: 6280)
+
+
+Started GET "/listings/new" for ::1 at 2020-03-03 17:44:42 +1100
+Processing by ListingsController#new as HTML
+  Rendering listings/new.html.erb within layouts/application
+  Rendered listings/_form.html.erb (Duration: 44.1ms | Allocations: 10578)
+  Rendered listings/new.html.erb within layouts/application (Duration: 45.7ms | Allocations: 10936)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 118ms (Views: 63.6ms | ActiveRecord: 21.0ms | Allocations: 21566)
+
+
+Started GET "/listings" for ::1 at 2020-03-03 17:44:54 +1100
+Processing by ListingsController#index as HTML
+  Rendering listings/index.html.erb within layouts/application
+  [1m[36mListing Load (0.9ms)[0m  [1m[34mSELECT "listings".* FROM "listings"[0m
+  ↳ app/views/listings/index.html.erb:4
+  Rendered listings/index.html.erb within layouts/application (Duration: 4.0ms | Allocations: 890)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 25ms (Views: 21.7ms | ActiveRecord: 0.9ms | Allocations: 5488)
+
+

@@ -25,9 +25,17 @@ class ListingsController < ApplicationController
   end
 
   def update
+    if(@listing.update(listing_params))
+      redirect_to @listing
+    else
+      render :edit
+    end
   end
 
   def destroy
+    @listing.delete
+
+    redirect_to listings_path
   end
 
   private
