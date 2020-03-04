@@ -3052,3 +3052,93 @@ Processing by ListingsController#index as HTML
 Completed 200 OK in 21ms (Views: 17.5ms | ActiveRecord: 1.4ms | Allocations: 7510)
 
 
+Started GET "/" for ::1 at 2020-03-04 18:03:07 +1100
+  [1m[35m (2.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ListingsController#index as HTML
+  Rendering listings/index.html.erb within layouts/application
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/listings/index.html.erb:3
+  [1m[36mListing Load (0.8ms)[0m  [1m[34mSELECT "listings".* FROM "listings"[0m
+  ↳ app/views/listings/index.html.erb:7
+  Rendered listings/index.html.erb within layouts/application (Duration: 54.3ms | Allocations: 16447)
+Completed 500 Internal Server Error in 148ms (ActiveRecord: 12.0ms | Allocations: 42195)
+
+
+  
+ActionView::Template::Error (Error: File to import not found or unreadable: bootstrap/disc/css/bootstrap.
+        on line 1:1 of app/assets/stylesheets/custom.css.scss
+>> @import "bootstrap/disc/css/bootstrap";
+
+   ^
+):
+     5:     <%= csrf_meta_tags %>
+     6:     <%= csp_meta_tag %>
+     7: 
+     8:     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+     9:     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    10:   </head>
+    11: 
+  
+app/assets/stylesheets/custom.css.scss:1
+app/views/layouts/application.html.erb:8
+Started GET "/" for ::1 at 2020-03-04 18:03:44 +1100
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ListingsController#index as HTML
+  Rendering listings/index.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/listings/index.html.erb:3
+  [1m[36mListing Load (0.6ms)[0m  [1m[34mSELECT "listings".* FROM "listings"[0m
+  ↳ app/views/listings/index.html.erb:7
+  Rendered listings/index.html.erb within layouts/application (Duration: 43.1ms | Allocations: 16447)
+[Webpacker] Compiling...
+Started GET "/" for ::1 at 2020-03-04 18:03:49 +1100
+Processing by ListingsController#index as HTML
+  Rendering listings/index.html.erb within layouts/application
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/listings/index.html.erb:3
+  [1m[36mListing Load (0.6ms)[0m  [1m[34mSELECT "listings".* FROM "listings"[0m
+  ↳ app/views/listings/index.html.erb:7
+  Rendered listings/index.html.erb within layouts/application (Duration: 8.0ms | Allocations: 3008)
+[Webpacker] Compiling...
+[Webpacker] Compiled all packs in /Users/tx/Code/C2C-Marketplace/public/packs
+[Webpacker] Hash: 84d7d04cb12d66e76f1a
+Version: webpack 4.42.0
+Time: 3598ms
+Built at: 03/04/2020 6:03:50 PM
+                                     Asset       Size       Chunks                         Chunk Names
+    js/application-102fefcee6cca73466d2.js    644 KiB  application  [emitted] [immutable]  application
+js/application-102fefcee6cca73466d2.js.map    756 KiB  application  [emitted] [dev]        application
+                             manifest.json  364 bytes               [emitted]              
+Entrypoint application = js/application-102fefcee6cca73466d2.js js/application-102fefcee6cca73466d2.js.map
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/packs/application.js] 771 bytes {application} [built]
+[./node_modules/webpack/buildin/global.js] (webpack)/buildin/global.js 905 bytes {application} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} [built]
+    + 6 hidden modules
+
+  Rendered layouts/_navbar.html.erb (Duration: 0.9ms | Allocations: 247)
+Completed 200 OK in 6256ms (Views: 6233.8ms | ActiveRecord: 10.5ms | Allocations: 76808)
+
+
+[Webpacker] Compiled all packs in /Users/tx/Code/C2C-Marketplace/public/packs
+[Webpacker] Hash: 84d7d04cb12d66e76f1a
+Version: webpack 4.42.0
+Time: 828ms
+Built at: 03/04/2020 6:03:51 PM
+                                     Asset       Size       Chunks                         Chunk Names
+    js/application-102fefcee6cca73466d2.js    644 KiB  application  [emitted] [immutable]  application
+js/application-102fefcee6cca73466d2.js.map    756 KiB  application  [emitted] [dev]        application
+                             manifest.json  364 bytes               [emitted]              
+Entrypoint application = js/application-102fefcee6cca73466d2.js js/application-102fefcee6cca73466d2.js.map
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/packs/application.js] 771 bytes {application} [built]
+[./node_modules/webpack/buildin/global.js] (webpack)/buildin/global.js 905 bytes {application} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} [built]
+    + 6 hidden modules
+
+  Rendered layouts/_navbar.html.erb (Duration: 0.2ms | Allocations: 48)
+Completed 200 OK in 2228ms (Views: 2225.2ms | ActiveRecord: 1.3ms | Allocations: 12769)
+
+
