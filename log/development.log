@@ -675,3 +675,1320 @@ Processing by ListingsController#index as HTML
 Completed 200 OK in 12ms (Views: 10.2ms | ActiveRecord: 0.5ms | Allocations: 6208)
 
 
+Started GET "/listings" for ::1 at 2020-03-03 22:54:15 +1100
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ListingsController#index as HTML
+  Rendering listings/index.html.erb within layouts/application
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/listings/index.html.erb:3
+  [1m[36mListing Load (0.5ms)[0m  [1m[34mSELECT "listings".* FROM "listings"[0m
+  ↳ app/views/listings/index.html.erb:7
+  Rendered listings/index.html.erb within layouts/application (Duration: 38.0ms | Allocations: 9328)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navbar.html.erb (Duration: 1.0ms | Allocations: 272)
+Completed 200 OK in 80ms (Views: 55.3ms | ActiveRecord: 11.1ms | Allocations: 19227)
+
+
+Started DELETE "/users/sign_out" for ::1 at 2020-03-03 22:54:22 +1100
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"3yqbQxw7m8bXIXE6nQdOJ7eLN3Z6LN9oGFL+mr1pplq/bccLWoMBi1xu5yeH1WCV1K+8YwT6L5fR+tcjJDlWDw=="}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Completed 302 Found in 17ms (ActiveRecord: 0.4ms | Allocations: 5009)
+
+
+Started GET "/" for ::1 at 2020-03-03 22:54:22 +1100
+Processing by ListingsController#index as HTML
+  Rendering listings/index.html.erb within layouts/application
+  [1m[36mListing Load (0.4ms)[0m  [1m[34mSELECT "listings".* FROM "listings"[0m
+  ↳ app/views/listings/index.html.erb:7
+  Rendered listings/index.html.erb within layouts/application (Duration: 3.9ms | Allocations: 751)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navbar.html.erb (Duration: 0.2ms | Allocations: 91)
+Completed 200 OK in 23ms (Views: 19.1ms | ActiveRecord: 0.4ms | Allocations: 5419)
+
+
+Started GET "/listings/new" for ::1 at 2020-03-03 22:54:24 +1100
+Processing by ListingsController#new as HTML
+Completed 401 Unauthorized in 2ms (ActiveRecord: 0.0ms | Allocations: 627)
+
+
+Started GET "/users/sign_in" for ::1 at 2020-03-03 22:54:24 +1100
+Processing by Devise::SessionsController#new as HTML
+  Rendering /Users/tx/.rvm/gems/ruby-2.5.1/gems/devise-4.7.1/app/views/devise/sessions/new.html.erb within layouts/application
+  Rendered /Users/tx/.rvm/gems/ruby-2.5.1/gems/devise-4.7.1/app/views/devise/shared/_links.html.erb (Duration: 2.2ms | Allocations: 654)
+  Rendered /Users/tx/.rvm/gems/ruby-2.5.1/gems/devise-4.7.1/app/views/devise/sessions/new.html.erb within layouts/application (Duration: 23.7ms | Allocations: 3857)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navbar.html.erb (Duration: 0.3ms | Allocations: 112)
+Completed 200 OK in 49ms (Views: 41.2ms | ActiveRecord: 0.0ms | Allocations: 10387)
+
+
+Started POST "/users/sign_in" for ::1 at 2020-03-03 22:54:29 +1100
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"ODY9PAiTxZYH26NWIcZSAtwiov6ayfoDSKkcMQ5iUmQkaURAxBYsC84N6W3oXhQyxoo4l87+Od/Ps0U27+dFcg==", "user"=>{"email"=>"asdjkl@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "asdjkl@gmail.com"], ["LIMIT", 1]]
+Redirected to http://localhost:3000/listings/new
+Completed 302 Found in 125ms (ActiveRecord: 0.3ms | Allocations: 6206)
+
+
+Started GET "/listings/new" for ::1 at 2020-03-03 22:54:29 +1100
+Processing by ListingsController#new as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering listings/new.html.erb within layouts/application
+  Rendered listings/_form.html.erb (Duration: 5.8ms | Allocations: 2686)
+  Rendered listings/new.html.erb within layouts/application (Duration: 7.4ms | Allocations: 3047)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navbar.html.erb (Duration: 0.1ms | Allocations: 61)
+Completed 200 OK in 27ms (Views: 14.5ms | ActiveRecord: 3.1ms | Allocations: 14336)
+
+
+Started POST "/listings" for ::1 at 2020-03-03 22:54:55 +1100
+Processing by ListingsController#create as HTML
+  Parameters: {"authenticity_token"=>"Um2BPaj8CPNQ4WADID441zMTNHrRl6brewg3d1m0Tueq31RQwqHw06kMM7uPrNCBEFAkhl6dnrAj2WPHchTP3A==", "listing"=>{"name"=>"charlie", "breed"=>"corgi", "price"=>"99999", "documentation"=>"Yes", "description"=>"Dog"}, "commit"=>"Create Listing"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/listings_controller.rb:18:in `create'
+  [1m[36mListing Create (0.9ms)[0m  [1m[32mINSERT INTO "listings" ("name", "breed", "price", "documentation", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "charlie"], ["breed", "corgi"], ["price", 99999], ["documentation", "Yes"], ["description", "Dog"], ["created_at", "2020-03-03 11:54:55.463107"], ["updated_at", "2020-03-03 11:54:55.463107"]]
+  ↳ app/controllers/listings_controller.rb:18:in `create'
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/listings_controller.rb:18:in `create'
+Redirected to http://localhost:3000/listings/2
+Completed 302 Found in 10ms (ActiveRecord: 2.2ms | Allocations: 4529)
+
+
+Started GET "/listings/2" for ::1 at 2020-03-03 22:54:55 +1100
+Processing by ListingsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mListing Load (0.3ms)[0m  [1m[34mSELECT "listings".* FROM "listings" WHERE "listings"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/listings_controller.rb:49:in `find_listing'
+  Rendering listings/show.html.erb within layouts/application
+  Rendered listings/show.html.erb within layouts/application (Duration: 5.3ms | Allocations: 2642)
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 0.3ms | Allocations: 4297)
+
+
+  
+ActionView::Template::Error (undefined method `user_id' for #<Listing:0x00007fea9d705528>):
+    4: <p><%= @listing.documentation %></p>
+    5: <p><%= @listing.description%></p>
+    6: 
+    7: <%= link_to 'Seller info', user_path(@listing.user_id)  %>
+    8: <%= link_to 'SHOW PROFILE', user_profile_path  %>
+    9: 
+   10: <%= link_to 'Back', listings_path %>
+  
+app/views/listings/show.html.erb:7
+Started GET "/" for ::1 at 2020-03-03 22:55:03 +1100
+Processing by ListingsController#index as HTML
+  Rendering listings/index.html.erb within layouts/application
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/listings/index.html.erb:3
+  [1m[36mListing Load (0.6ms)[0m  [1m[34mSELECT "listings".* FROM "listings"[0m
+  ↳ app/views/listings/index.html.erb:7
+  Rendered listings/index.html.erb within layouts/application (Duration: 7.3ms | Allocations: 1634)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navbar.html.erb (Duration: 0.1ms | Allocations: 50)
+Completed 200 OK in 30ms (Views: 27.2ms | ActiveRecord: 1.4ms | Allocations: 6317)
+
+
+Started GET "/listings/2" for ::1 at 2020-03-03 22:55:18 +1100
+Processing by ListingsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mListing Load (0.8ms)[0m  [1m[34mSELECT "listings".* FROM "listings" WHERE "listings"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/listings_controller.rb:49:in `find_listing'
+  Rendering listings/show.html.erb within layouts/application
+  Rendered listings/show.html.erb within layouts/application (Duration: 8.1ms | Allocations: 2390)
+Completed 500 Internal Server Error in 29ms (ActiveRecord: 0.8ms | Allocations: 3779)
+
+
+  
+ActionView::Template::Error (undefined method `user_id' for #<Listing:0x00007fea9c305050>):
+    4: <p><%= @listing.documentation %></p>
+    5: <p><%= @listing.description%></p>
+    6: 
+    7: <%= link_to 'Seller info', user_path(@listing.user_id)  %>
+    8: <%= link_to 'SHOW PROFILE', user_profile_path  %>
+    9: 
+   10: <%= link_to 'Back', listings_path %>
+  
+app/views/listings/show.html.erb:7
+Started GET "/" for ::1 at 2020-03-03 22:55:21 +1100
+Processing by ListingsController#index as HTML
+  Rendering listings/index.html.erb within layouts/application
+  [1m[36mUser Load (2.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/listings/index.html.erb:3
+  [1m[36mListing Load (0.4ms)[0m  [1m[34mSELECT "listings".* FROM "listings"[0m
+  ↳ app/views/listings/index.html.erb:7
+  Rendered listings/index.html.erb within layouts/application (Duration: 7.1ms | Allocations: 1595)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navbar.html.erb (Duration: 0.2ms | Allocations: 48)
+Completed 200 OK in 19ms (Views: 15.1ms | ActiveRecord: 2.5ms | Allocations: 6222)
+
+
+Started DELETE "/users/sign_out" for ::1 at 2020-03-03 22:55:25 +1100
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"P2xkdty0lunLeYtxiN1SSM1p9yc5TVGVG//4ulKuUbnH3rEbtuluyTKU2MknT7oe7irn27ZHac5DLqwKeQ7Qgg=="}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Completed 302 Found in 5ms (ActiveRecord: 0.7ms | Allocations: 2511)
+
+
+Started GET "/" for ::1 at 2020-03-03 22:55:25 +1100
+Processing by ListingsController#index as HTML
+  Rendering listings/index.html.erb within layouts/application
+  [1m[36mListing Load (0.3ms)[0m  [1m[34mSELECT "listings".* FROM "listings"[0m
+  ↳ app/views/listings/index.html.erb:7
+  Rendered listings/index.html.erb within layouts/application (Duration: 1.6ms | Allocations: 906)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navbar.html.erb (Duration: 0.2ms | Allocations: 89)
+Completed 200 OK in 10ms (Views: 9.4ms | ActiveRecord: 0.3ms | Allocations: 5568)
+
+
+Started GET "/" for ::1 at 2020-03-03 22:58:14 +1100
+Processing by ListingsController#index as HTML
+  Rendering listings/index.html.erb within layouts/application
+  [1m[36mListing Load (0.3ms)[0m  [1m[34mSELECT "listings".* FROM "listings"[0m
+  ↳ app/views/listings/index.html.erb:7
+  Rendered listings/index.html.erb within layouts/application (Duration: 2.2ms | Allocations: 1114)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navbar.html.erb (Duration: 1.0ms | Allocations: 275)
+Completed 200 OK in 23ms (Views: 20.3ms | ActiveRecord: 0.3ms | Allocations: 7170)
+
+
+Started GET "/listings/2" for ::1 at 2020-03-03 22:58:16 +1100
+Processing by ListingsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mListing Load (0.6ms)[0m  [1m[34mSELECT "listings".* FROM "listings" WHERE "listings"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/listings_controller.rb:49:in `find_listing'
+  Rendering listings/show.html.erb within layouts/application
+  Rendered listings/show.html.erb within layouts/application (Duration: 7.8ms | Allocations: 2590)
+Completed 500 Internal Server Error in 11ms (ActiveRecord: 0.6ms | Allocations: 4102)
+
+
+  
+ActionView::Template::Error (undefined method `user_id' for #<Listing:0x00007fea9f7d56b8>):
+    4: <p><%= @listing.documentation %></p>
+    5: <p><%= @listing.description%></p>
+    6: 
+    7: <%= link_to 'Seller info', user_path(@listing.user_id)  %>
+    8: <%= link_to 'SHOW PROFILE', user_profile_path  %>
+    9: 
+   10: <%= link_to 'Back', listings_path %>
+  
+app/views/listings/show.html.erb:7
+Started GET "/" for ::1 at 2020-03-03 22:58:18 +1100
+Processing by ListingsController#index as HTML
+  Rendering listings/index.html.erb within layouts/application
+  [1m[36mListing Load (0.4ms)[0m  [1m[34mSELECT "listings".* FROM "listings"[0m
+  ↳ app/views/listings/index.html.erb:7
+  Rendered listings/index.html.erb within layouts/application (Duration: 2.2ms | Allocations: 804)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navbar.html.erb (Duration: 0.4ms | Allocations: 89)
+Completed 200 OK in 17ms (Views: 15.5ms | ActiveRecord: 0.4ms | Allocations: 5475)
+
+
+Started GET "/users/sign_in" for ::1 at 2020-03-03 22:58:19 +1100
+Processing by Devise::SessionsController#new as HTML
+  Rendering /Users/tx/.rvm/gems/ruby-2.5.1/gems/devise-4.7.1/app/views/devise/sessions/new.html.erb within layouts/application
+  Rendered /Users/tx/.rvm/gems/ruby-2.5.1/gems/devise-4.7.1/app/views/devise/shared/_links.html.erb (Duration: 1.4ms | Allocations: 554)
+  Rendered /Users/tx/.rvm/gems/ruby-2.5.1/gems/devise-4.7.1/app/views/devise/sessions/new.html.erb within layouts/application (Duration: 5.6ms | Allocations: 2096)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navbar.html.erb (Duration: 0.3ms | Allocations: 112)
+Completed 200 OK in 25ms (Views: 22.5ms | ActiveRecord: 0.0ms | Allocations: 8198)
+
+
+Started POST "/users/sign_in" for ::1 at 2020-03-03 22:58:24 +1100
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"rmHp+yjJvVbhjKqBTta681e7Viby5ol9i5Jvy9dIOZkEANmOi9+jtpVCEfys8p9O1wIl3FOCt+/9XsS8fdyQJQ==", "user"=>{"email"=>"asdjkl@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "asdjkl@gmail.com"], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Completed 302 Found in 115ms (ActiveRecord: 0.4ms | Allocations: 4178)
+
+
+Started GET "/" for ::1 at 2020-03-03 22:58:24 +1100
+Processing by ListingsController#index as HTML
+  Rendering listings/index.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/listings/index.html.erb:3
+  [1m[36mListing Load (0.3ms)[0m  [1m[34mSELECT "listings".* FROM "listings"[0m
+  ↳ app/views/listings/index.html.erb:7
+  Rendered listings/index.html.erb within layouts/application (Duration: 3.5ms | Allocations: 1701)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navbar.html.erb (Duration: 0.1ms | Allocations: 50)
+Completed 200 OK in 11ms (Views: 10.2ms | ActiveRecord: 0.5ms | Allocations: 6326)
+
+
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (159.8ms)[0m  [1m[35mDROP DATABASE IF EXISTS "Marketplace_development"[0m
+  [1m[35m (139.1ms)[0m  [1m[35mDROP DATABASE IF EXISTS "Marketplace_test"[0m
+  [1m[35m (441.8ms)[0m  [1m[35mCREATE DATABASE "Marketplace_development" ENCODING = 'unicode'[0m
+  [1m[35m (271.7ms)[0m  [1m[35mCREATE DATABASE "Marketplace_test" ENCODING = 'unicode'[0m
+  [1m[35m (9.3ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[35m (4.2ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(8559049176625533915)[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateListings (20200303042757)
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (9.7ms)[0m  [1m[35mCREATE TABLE "listings" ("id" bigserial primary key, "name" character varying, "breed" character varying, "price" integer, "documentation" text, "description" text, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mprimary::SchemaMigration Create (1.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20200303042757"]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+Migrating to DeviseCreateUsers (20200303111350)
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (4.7ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "email" character varying DEFAULT '' NOT NULL, "encrypted_password" character varying DEFAULT '' NOT NULL, "reset_password_token" character varying, "reset_password_sent_at" timestamp, "remember_created_at" timestamp, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (2.6ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_users_on_email" ON "users"  ("email")[0m
+  [1m[35m (1.4ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_users_on_reset_password_token" ON "users"  ("reset_password_token")[0m
+  [1m[36mprimary::SchemaMigration Create (1.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20200303111350"]]
+  [1m[35m (1.5ms)[0m  [1m[35mCOMMIT[0m
+Migrating to AddUserToListings (20200303120822)
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (4.8ms)[0m  [1m[35mALTER TABLE "listings" ADD "user_id" bigint NOT NULL[0m
+  [1m[35m (1.2ms)[0m  [1m[35mCREATE  INDEX  "index_listings_on_user_id" ON "listings"  ("user_id")[0m
+  [1m[35m (8.9ms)[0m  [1m[35mALTER TABLE "listings" ADD CONSTRAINT "fk_rails_baa008bfd2"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+[0m
+  [1m[36mprimary::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20200303120822"]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (1.2ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.6ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2020-03-03 12:12:14.418857"], ["updated_at", "2020-03-03 12:12:14.418857"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(8559049176625533915)[0m
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (1.0ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "test1@dog.com"], ["LIMIT", 1]]
+  [1m[36mUser Create (8.2ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["email", "test1@dog.com"], ["encrypted_password", "$2a$11$c.XVsEal3uFuf6Pg9psECuvLzX7Qs0Xh5ByXZKHtKa9MWPuUkyafy"], ["created_at", "2020-03-04 04:57:30.757101"], ["updated_at", "2020-03-04 04:57:30.757101"]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "test3@dog.com"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["email", "test3@dog.com"], ["encrypted_password", "$2a$11$wNU59shAoTBF/1/q6A7Pj.mk6TyvCkdh.WRlvm8n.HWaKfAwKcpJS"], ["created_at", "2020-03-04 04:57:30.888322"], ["updated_at", "2020-03-04 04:57:30.888322"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (1.0ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "test1@dog.com"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "test3@dog.com"], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (1.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "test1@dog.com"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "test3@dog.com"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (157.6ms)[0m  [1m[35mDROP DATABASE IF EXISTS "Marketplace_development"[0m
+  [1m[35m (148.4ms)[0m  [1m[35mDROP DATABASE IF EXISTS "Marketplace_test"[0m
+  [1m[35m (428.8ms)[0m  [1m[35mCREATE DATABASE "Marketplace_development" ENCODING = 'unicode'[0m
+  [1m[35m (278.4ms)[0m  [1m[35mCREATE DATABASE "Marketplace_test" ENCODING = 'unicode'[0m
+  [1m[35mSQL (2.7ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (1.1ms)[0m  [1m[35mDROP TABLE IF EXISTS "listings" CASCADE[0m
+  [1m[35m (13.6ms)[0m  [1m[35mCREATE TABLE "listings" ("id" bigserial primary key, "name" character varying, "breed" character varying, "price" integer, "documentation" text, "description" text, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL, "user_id" bigint NOT NULL)[0m
+  [1m[35m (2.3ms)[0m  [1m[35mCREATE  INDEX  "index_listings_on_user_id" ON "listings"  ("user_id")[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "users" CASCADE[0m
+  [1m[35m (4.0ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "email" character varying DEFAULT '' NOT NULL, "encrypted_password" character varying DEFAULT '' NOT NULL, "reset_password_token" character varying, "reset_password_sent_at" timestamp, "remember_created_at" timestamp, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (1.6ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_users_on_email" ON "users"  ("email")[0m
+  [1m[35m (1.6ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_users_on_reset_password_token" ON "users"  ("reset_password_token")[0m
+  [1m[35m (4.4ms)[0m  [1m[35mALTER TABLE "listings" ADD CONSTRAINT "fk_rails_baa008bfd2"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+[0m
+  [1m[35m (3.1ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.8ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20200303120822)[0m
+  [1m[35m (1.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20200303042757),
+(20200303111350);
+
+[0m
+  [1m[35m (4.8ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.6ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2020-03-04 05:09:12.050953"], ["updated_at", "2020-03-04 05:09:12.050953"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "schema_sha1"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.4ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "schema_sha1"], ["value", "96e5ebd11bde753487160c8a06a2918d151b1c3e"], ["created_at", "2020-03-04 05:09:12.062261"], ["updated_at", "2020-03-04 05:09:12.062261"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "listings" CASCADE[0m
+  [1m[35m (11.4ms)[0m  [1m[35mCREATE TABLE "listings" ("id" bigserial primary key, "name" character varying, "breed" character varying, "price" integer, "documentation" text, "description" text, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL, "user_id" bigint NOT NULL)[0m
+  [1m[35m (1.2ms)[0m  [1m[35mCREATE  INDEX  "index_listings_on_user_id" ON "listings"  ("user_id")[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE IF EXISTS "users" CASCADE[0m
+  [1m[35m (5.2ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "email" character varying DEFAULT '' NOT NULL, "encrypted_password" character varying DEFAULT '' NOT NULL, "reset_password_token" character varying, "reset_password_sent_at" timestamp, "remember_created_at" timestamp, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (1.7ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_users_on_email" ON "users"  ("email")[0m
+  [1m[35m (1.7ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_users_on_reset_password_token" ON "users"  ("reset_password_token")[0m
+  [1m[35m (3.6ms)[0m  [1m[35mALTER TABLE "listings" ADD CONSTRAINT "fk_rails_baa008bfd2"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+[0m
+  [1m[35m (3.1ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.8ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20200303120822)[0m
+  [1m[35m (0.6ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20200303042757),
+(20200303111350);
+
+[0m
+  [1m[35m (3.9ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.4ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2020-03-04 05:09:12.159804"], ["updated_at", "2020-03-04 05:09:12.159804"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Update (0.7ms)[0m  [1m[33mUPDATE "ar_internal_metadata" SET "value" = $1, "updated_at" = $2 WHERE "ar_internal_metadata"."key" = $3[0m  [["value", "test"], ["updated_at", "2020-03-04 05:09:12.166361"], ["key", "environment"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "schema_sha1"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (1.0ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "schema_sha1"], ["value", "96e5ebd11bde753487160c8a06a2918d151b1c3e"], ["created_at", "2020-03-04 05:09:12.175456"], ["updated_at", "2020-03-04 05:09:12.175456"]]
+  [1m[35m (3.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (0.9ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "test1@dog.com"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.7ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["email", "test1@dog.com"], ["encrypted_password", "$2a$11$TLEoUnbgnm4DwvxkMDbJU.QGve2kfAvTMSzMnyDTlusimP9qB6K/G"], ["created_at", "2020-03-04 05:09:12.407862"], ["updated_at", "2020-03-04 05:09:12.407862"]]
+  [1m[35m (2.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "test3@dog.com"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.5ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["email", "test3@dog.com"], ["encrypted_password", "$2a$11$/cl24nzqfotls6G82hBYvO2uuyY/oegtEF1sNLy2uMdXtrtcy0pau"], ["created_at", "2020-03-04 05:09:12.536328"], ["updated_at", "2020-03-04 05:09:12.536328"]]
+  [1m[35m (2.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (1.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "test1@dog.com"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "test3@dog.com"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+Started GET "/" for ::1 at 2020-03-04 16:11:49 +1100
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ListingsController#index as HTML
+  Rendering listings/index.html.erb within layouts/application
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/listings/index.html.erb:3
+  [1m[36mListing Load (0.6ms)[0m  [1m[34mSELECT "listings".* FROM "listings"[0m
+  ↳ app/views/listings/index.html.erb:7
+  Rendered listings/index.html.erb within layouts/application (Duration: 35.7ms | Allocations: 9442)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navbar.html.erb (Duration: 2.0ms | Allocations: 309)
+Completed 200 OK in 87ms (Views: 66.0ms | ActiveRecord: 9.6ms | Allocations: 20277)
+
+
+Started GET "/users/sign_in" for ::1 at 2020-03-04 16:11:57 +1100
+Processing by Devise::SessionsController#new as HTML
+  Rendering /Users/tx/.rvm/gems/ruby-2.5.1/gems/devise-4.7.1/app/views/devise/sessions/new.html.erb within layouts/application
+  Rendered /Users/tx/.rvm/gems/ruby-2.5.1/gems/devise-4.7.1/app/views/devise/shared/_links.html.erb (Duration: 2.3ms | Allocations: 654)
+  Rendered /Users/tx/.rvm/gems/ruby-2.5.1/gems/devise-4.7.1/app/views/devise/sessions/new.html.erb within layouts/application (Duration: 38.7ms | Allocations: 5875)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navbar.html.erb (Duration: 0.5ms | Allocations: 112)
+Completed 200 OK in 66ms (Views: 59.4ms | ActiveRecord: 0.0ms | Allocations: 12474)
+
+
+Started POST "/users/sign_in" for ::1 at 2020-03-04 16:12:35 +1100
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"UPG+eyPzkT8rkBEMA/59M1oA/+l3boOpeVPxznywRM6Aenrk88melVl5Y4aMbXfkhcA2Gb1hU9uK5hdBFB9ODw==", "user"=>{"email"=>"test1@dog.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "test1@dog.com"], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Completed 302 Found in 129ms (ActiveRecord: 0.6ms | Allocations: 6284)
+
+
+Started GET "/" for ::1 at 2020-03-04 16:12:35 +1100
+Processing by ListingsController#index as HTML
+  Rendering listings/index.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/listings/index.html.erb:3
+  [1m[36mListing Load (0.3ms)[0m  [1m[34mSELECT "listings".* FROM "listings"[0m
+  ↳ app/views/listings/index.html.erb:7
+  Rendered listings/index.html.erb within layouts/application (Duration: 3.7ms | Allocations: 1577)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navbar.html.erb (Duration: 0.2ms | Allocations: 53)
+Completed 200 OK in 18ms (Views: 16.6ms | ActiveRecord: 0.7ms | Allocations: 6219)
+
+
+Started DELETE "/users/sign_out" for ::1 at 2020-03-04 16:12:39 +1100
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"hCCyT1FGaNyKJpdSnM/6Sap4ceDJUbK0XcQLxuZj4qkUh6w4bAJdxuAvLaOzgcG6sIXDQkIPT895p1K44xbfcw=="}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Completed 302 Found in 7ms (ActiveRecord: 0.3ms | Allocations: 3250)
+
+
+Started GET "/" for ::1 at 2020-03-04 16:12:39 +1100
+Processing by ListingsController#index as HTML
+  Rendering listings/index.html.erb within layouts/application
+  [1m[36mListing Load (0.4ms)[0m  [1m[34mSELECT "listings".* FROM "listings"[0m
+  ↳ app/views/listings/index.html.erb:7
+  Rendered listings/index.html.erb within layouts/application (Duration: 2.0ms | Allocations: 705)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navbar.html.erb (Duration: 0.2ms | Allocations: 98)
+Completed 200 OK in 12ms (Views: 10.5ms | ActiveRecord: 0.4ms | Allocations: 5378)
+
+
+Started GET "/users/sign_in" for ::1 at 2020-03-04 16:12:40 +1100
+Processing by Devise::SessionsController#new as HTML
+  Rendering /Users/tx/.rvm/gems/ruby-2.5.1/gems/devise-4.7.1/app/views/devise/sessions/new.html.erb within layouts/application
+  Rendered /Users/tx/.rvm/gems/ruby-2.5.1/gems/devise-4.7.1/app/views/devise/shared/_links.html.erb (Duration: 0.4ms | Allocations: 136)
+  Rendered /Users/tx/.rvm/gems/ruby-2.5.1/gems/devise-4.7.1/app/views/devise/sessions/new.html.erb within layouts/application (Duration: 3.5ms | Allocations: 1114)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navbar.html.erb (Duration: 0.3ms | Allocations: 106)
+Completed 200 OK in 18ms (Views: 16.3ms | ActiveRecord: 0.0ms | Allocations: 6070)
+
+
+Started POST "/users/sign_in" for ::1 at 2020-03-04 16:12:44 +1100
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"TTuzfkLt9yWmd5iGe0+jj76ByxlHQgvFWB6gs/sMWCY1GtEwxjpmPGpzXhLRqFSqcoFAmyryNjnMnR50n6fJ0Q==", "user"=>{"email"=>"test4@dog.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "test4@dog.com"], ["LIMIT", 1]]
+Completed 401 Unauthorized in 5ms (ActiveRecord: 0.9ms | Allocations: 2206)
+
+
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"authenticity_token"=>"TTuzfkLt9yWmd5iGe0+jj76ByxlHQgvFWB6gs/sMWCY1GtEwxjpmPGpzXhLRqFSqcoFAmyryNjnMnR50n6fJ0Q==", "user"=>{"email"=>"test4@dog.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  Rendering /Users/tx/.rvm/gems/ruby-2.5.1/gems/devise-4.7.1/app/views/devise/sessions/new.html.erb within layouts/application
+  Rendered /Users/tx/.rvm/gems/ruby-2.5.1/gems/devise-4.7.1/app/views/devise/shared/_links.html.erb (Duration: 0.2ms | Allocations: 136)
+  Rendered /Users/tx/.rvm/gems/ruby-2.5.1/gems/devise-4.7.1/app/views/devise/sessions/new.html.erb within layouts/application (Duration: 2.6ms | Allocations: 1111)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navbar.html.erb (Duration: 0.2ms | Allocations: 70)
+Completed 200 OK in 119ms (Views: 10.3ms | ActiveRecord: 0.0ms | Allocations: 5648)
+
+
+  [1m[36mListing Load (0.4ms)[0m  [1m[34mSELECT "listings".* FROM "listings" LIMIT $1[0m  [["LIMIT", 11]]
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (152.1ms)[0m  [1m[35mDROP DATABASE IF EXISTS "Marketplace_development"[0m
+  [1m[35m (145.6ms)[0m  [1m[35mDROP DATABASE IF EXISTS "Marketplace_test"[0m
+  [1m[35m (434.2ms)[0m  [1m[35mCREATE DATABASE "Marketplace_development" ENCODING = 'unicode'[0m
+  [1m[35m (280.8ms)[0m  [1m[35mCREATE DATABASE "Marketplace_test" ENCODING = 'unicode'[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "listings" CASCADE[0m
+  [1m[35m (19.9ms)[0m  [1m[35mCREATE TABLE "listings" ("id" bigserial primary key, "name" character varying, "breed" character varying, "price" integer, "documentation" text, "description" text, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL, "user_id" bigint NOT NULL)[0m
+  [1m[35m (1.6ms)[0m  [1m[35mCREATE  INDEX  "index_listings_on_user_id" ON "listings"  ("user_id")[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "users" CASCADE[0m
+  [1m[35m (6.0ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "email" character varying DEFAULT '' NOT NULL, "encrypted_password" character varying DEFAULT '' NOT NULL, "reset_password_token" character varying, "reset_password_sent_at" timestamp, "remember_created_at" timestamp, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (1.8ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_users_on_email" ON "users"  ("email")[0m
+  [1m[35m (1.4ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_users_on_reset_password_token" ON "users"  ("reset_password_token")[0m
+  [1m[35m (3.1ms)[0m  [1m[35mALTER TABLE "listings" ADD CONSTRAINT "fk_rails_baa008bfd2"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+[0m
+  [1m[35m (5.1ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.8ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20200303120822)[0m
+  [1m[35m (0.9ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20200303042757),
+(20200303111350);
+
+[0m
+  [1m[35m (3.6ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.8ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2020-03-04 05:20:16.623093"], ["updated_at", "2020-03-04 05:20:16.623093"]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "schema_sha1"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.3ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "schema_sha1"], ["value", "96e5ebd11bde753487160c8a06a2918d151b1c3e"], ["created_at", "2020-03-04 05:20:16.633422"], ["updated_at", "2020-03-04 05:20:16.633422"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "listings" CASCADE[0m
+  [1m[35m (7.8ms)[0m  [1m[35mCREATE TABLE "listings" ("id" bigserial primary key, "name" character varying, "breed" character varying, "price" integer, "documentation" text, "description" text, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL, "user_id" bigint NOT NULL)[0m
+  [1m[35m (1.7ms)[0m  [1m[35mCREATE  INDEX  "index_listings_on_user_id" ON "listings"  ("user_id")[0m
+  [1m[35m (0.3ms)[0m  [1m[35mDROP TABLE IF EXISTS "users" CASCADE[0m
+  [1m[35m (6.2ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "email" character varying DEFAULT '' NOT NULL, "encrypted_password" character varying DEFAULT '' NOT NULL, "reset_password_token" character varying, "reset_password_sent_at" timestamp, "remember_created_at" timestamp, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (2.3ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_users_on_email" ON "users"  ("email")[0m
+  [1m[35m (1.4ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_users_on_reset_password_token" ON "users"  ("reset_password_token")[0m
+  [1m[35m (3.5ms)[0m  [1m[35mALTER TABLE "listings" ADD CONSTRAINT "fk_rails_baa008bfd2"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+[0m
+  [1m[35m (5.0ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.8ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20200303120822)[0m
+  [1m[35m (0.6ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20200303042757),
+(20200303111350);
+
+[0m
+  [1m[35m (4.8ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.9ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2020-03-04 05:20:16.727810"], ["updated_at", "2020-03-04 05:20:16.727810"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Update (0.3ms)[0m  [1m[33mUPDATE "ar_internal_metadata" SET "value" = $1, "updated_at" = $2 WHERE "ar_internal_metadata"."key" = $3[0m  [["value", "test"], ["updated_at", "2020-03-04 05:20:16.735727"], ["key", "environment"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "schema_sha1"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.4ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "schema_sha1"], ["value", "96e5ebd11bde753487160c8a06a2918d151b1c3e"], ["created_at", "2020-03-04 05:20:16.742064"], ["updated_at", "2020-03-04 05:20:16.742064"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (1.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "test1@dog.com"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.8ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["email", "test1@dog.com"], ["encrypted_password", "$2a$11$asby9iukBZyeGmVDfSgdjOMUOezWdnvPsXUiL/fdtzC/vocNI2xz."], ["created_at", "2020-03-04 05:20:16.932015"], ["updated_at", "2020-03-04 05:20:16.932015"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "test3@dog.com"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["email", "test3@dog.com"], ["encrypted_password", "$2a$11$Z76OeMuL46v3oDYQuBJMrOYVtzOqGd6AwkmsuareZAco7ZBHCEmvy"], ["created_at", "2020-03-04 05:20:17.055329"], ["updated_at", "2020-03-04 05:20:17.055329"]]
+  [1m[35m (2.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mListing Create (3.6ms)[0m  [1m[32mINSERT INTO "listings" ("name", "breed", "price", "documentation", "description", "created_at", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["name", "Charlie"], ["breed", "Corgi"], ["price", 1000], ["documentation", "Vaccinated"], ["description", "Dog"], ["created_at", "2020-03-04 05:20:17.086939"], ["updated_at", "2020-03-04 05:20:17.086939"], ["user_id", 1]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mListing Create (0.5ms)[0m  [1m[32mINSERT INTO "listings" ("name", "breed", "price", "documentation", "description", "created_at", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["name", "Charlie"], ["breed", "Corgi"], ["price", 1000], ["documentation", "Vaccinated"], ["description", "Dog"], ["created_at", "2020-03-04 05:20:17.098592"], ["updated_at", "2020-03-04 05:20:17.098592"], ["user_id", 1]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mListing Create (0.4ms)[0m  [1m[32mINSERT INTO "listings" ("name", "breed", "price", "documentation", "description", "created_at", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["name", "Charlie"], ["breed", "Corgi"], ["price", 1000], ["documentation", "Vaccinated"], ["description", "Dog"], ["created_at", "2020-03-04 05:20:17.104940"], ["updated_at", "2020-03-04 05:20:17.104940"], ["user_id", 1]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mListing Create (0.7ms)[0m  [1m[32mINSERT INTO "listings" ("name", "breed", "price", "documentation", "description", "created_at", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["name", "Peanut"], ["breed", "Yes"], ["price", 1000], ["documentation", "Vaccinated"], ["description", "Dog"], ["created_at", "2020-03-04 05:20:17.110668"], ["updated_at", "2020-03-04 05:20:17.110668"], ["user_id", 2]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mListing Create (0.5ms)[0m  [1m[32mINSERT INTO "listings" ("name", "breed", "price", "documentation", "description", "created_at", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["name", "Peanut"], ["breed", "Yes"], ["price", 1000], ["documentation", "Vaccinated"], ["description", "Dog"], ["created_at", "2020-03-04 05:20:17.118039"], ["updated_at", "2020-03-04 05:20:17.118039"], ["user_id", 2]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mListing Create (1.2ms)[0m  [1m[32mINSERT INTO "listings" ("name", "breed", "price", "documentation", "description", "created_at", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["name", "Charlie"], ["breed", "Corgi"], ["price", 1000], ["documentation", "Vaccinated"], ["description", "Dog"], ["created_at", "2020-03-04 05:20:17.124230"], ["updated_at", "2020-03-04 05:20:17.124230"], ["user_id", 1]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mListing Create (0.4ms)[0m  [1m[32mINSERT INTO "listings" ("name", "breed", "price", "documentation", "description", "created_at", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["name", "Charlie"], ["breed", "Corgi"], ["price", 1000], ["documentation", "Vaccinated"], ["description", "Dog"], ["created_at", "2020-03-04 05:20:17.136308"], ["updated_at", "2020-03-04 05:20:17.136308"], ["user_id", 1]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mListing Create (0.6ms)[0m  [1m[32mINSERT INTO "listings" ("name", "breed", "price", "documentation", "description", "created_at", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["name", "Peanut"], ["breed", "Yes"], ["price", 1000], ["documentation", "Vaccinated"], ["description", "Dog"], ["created_at", "2020-03-04 05:20:17.147477"], ["updated_at", "2020-03-04 05:20:17.147477"], ["user_id", 2]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mListing Create (0.4ms)[0m  [1m[32mINSERT INTO "listings" ("name", "breed", "price", "documentation", "description", "created_at", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["name", "Peanut"], ["breed", "Yes"], ["price", 1000], ["documentation", "Vaccinated"], ["description", "Dog"], ["created_at", "2020-03-04 05:20:17.155877"], ["updated_at", "2020-03-04 05:20:17.155877"], ["user_id", 2]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (145.1ms)[0m  [1m[35mDROP DATABASE IF EXISTS "Marketplace_development"[0m
+  [1m[35m (136.2ms)[0m  [1m[35mDROP DATABASE IF EXISTS "Marketplace_test"[0m
+  [1m[35m (289.5ms)[0m  [1m[35mCREATE DATABASE "Marketplace_development" ENCODING = 'unicode'[0m
+  [1m[35m (283.0ms)[0m  [1m[35mCREATE DATABASE "Marketplace_test" ENCODING = 'unicode'[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (0.3ms)[0m  [1m[35mDROP TABLE IF EXISTS "listings" CASCADE[0m
+  [1m[35m (12.4ms)[0m  [1m[35mCREATE TABLE "listings" ("id" bigserial primary key, "name" character varying, "breed" character varying, "price" integer, "documentation" text, "description" text, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL, "user_id" bigint NOT NULL)[0m
+  [1m[35m (1.5ms)[0m  [1m[35mCREATE  INDEX  "index_listings_on_user_id" ON "listings"  ("user_id")[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "users" CASCADE[0m
+  [1m[35m (6.5ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "email" character varying DEFAULT '' NOT NULL, "encrypted_password" character varying DEFAULT '' NOT NULL, "reset_password_token" character varying, "reset_password_sent_at" timestamp, "remember_created_at" timestamp, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (1.8ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_users_on_email" ON "users"  ("email")[0m
+  [1m[35m (1.4ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_users_on_reset_password_token" ON "users"  ("reset_password_token")[0m
+  [1m[35m (4.1ms)[0m  [1m[35mALTER TABLE "listings" ADD CONSTRAINT "fk_rails_baa008bfd2"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+[0m
+  [1m[35m (3.6ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.8ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20200303120822)[0m
+  [1m[35m (0.6ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20200303042757),
+(20200303111350);
+
+[0m
+  [1m[35m (4.5ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.5ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.6ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2020-03-04 05:20:37.983600"], ["updated_at", "2020-03-04 05:20:37.983600"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "schema_sha1"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.4ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "schema_sha1"], ["value", "96e5ebd11bde753487160c8a06a2918d151b1c3e"], ["created_at", "2020-03-04 05:20:37.995169"], ["updated_at", "2020-03-04 05:20:37.995169"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "listings" CASCADE[0m
+  [1m[35m (9.9ms)[0m  [1m[35mCREATE TABLE "listings" ("id" bigserial primary key, "name" character varying, "breed" character varying, "price" integer, "documentation" text, "description" text, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL, "user_id" bigint NOT NULL)[0m
+  [1m[35m (1.5ms)[0m  [1m[35mCREATE  INDEX  "index_listings_on_user_id" ON "listings"  ("user_id")[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE IF EXISTS "users" CASCADE[0m
+  [1m[35m (5.3ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "email" character varying DEFAULT '' NOT NULL, "encrypted_password" character varying DEFAULT '' NOT NULL, "reset_password_token" character varying, "reset_password_sent_at" timestamp, "remember_created_at" timestamp, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (1.6ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_users_on_email" ON "users"  ("email")[0m
+  [1m[35m (1.4ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_users_on_reset_password_token" ON "users"  ("reset_password_token")[0m
+  [1m[35m (3.5ms)[0m  [1m[35mALTER TABLE "listings" ADD CONSTRAINT "fk_rails_baa008bfd2"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+[0m
+  [1m[35m (4.8ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (1.0ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20200303120822)[0m
+  [1m[35m (0.7ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20200303042757),
+(20200303111350);
+
+[0m
+  [1m[35m (5.8ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.6ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2020-03-04 05:20:38.120408"], ["updated_at", "2020-03-04 05:20:38.120408"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Update (0.5ms)[0m  [1m[33mUPDATE "ar_internal_metadata" SET "value" = $1, "updated_at" = $2 WHERE "ar_internal_metadata"."key" = $3[0m  [["value", "test"], ["updated_at", "2020-03-04 05:20:38.128500"], ["key", "environment"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "schema_sha1"], ["LIMIT", 1]]
+  [1m[35m (2.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.3ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "schema_sha1"], ["value", "96e5ebd11bde753487160c8a06a2918d151b1c3e"], ["created_at", "2020-03-04 05:20:38.135638"], ["updated_at", "2020-03-04 05:20:38.135638"]]
+  [1m[35m (1.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (0.9ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "test1@dog.com"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.7ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["email", "test1@dog.com"], ["encrypted_password", "$2a$11$db4S6GjNoeDzTBvsi8ak2ecxhklku.d6pIJQJ8m.lfVwJWYy4k3DO"], ["created_at", "2020-03-04 05:20:38.313926"], ["updated_at", "2020-03-04 05:20:38.313926"]]
+  [1m[35m (5.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "test3@dog.com"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["email", "test3@dog.com"], ["encrypted_password", "$2a$11$lL9JtzJITFnfav.2NrqUguXHOgo50e/iNrddXUiyLytJjBF.uyH.q"], ["created_at", "2020-03-04 05:20:38.433551"], ["updated_at", "2020-03-04 05:20:38.433551"]]
+  [1m[35m (5.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mListing Create (1.0ms)[0m  [1m[32mINSERT INTO "listings" ("name", "breed", "price", "documentation", "description", "created_at", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["name", "Charlie"], ["breed", "Corgi"], ["price", 1000], ["documentation", "Vaccinated"], ["description", "Dog"], ["created_at", "2020-03-04 05:20:38.460472"], ["updated_at", "2020-03-04 05:20:38.460472"], ["user_id", 1]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mListing Create (0.5ms)[0m  [1m[32mINSERT INTO "listings" ("name", "breed", "price", "documentation", "description", "created_at", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["name", "Charlie"], ["breed", "Corgi"], ["price", 1000], ["documentation", "Vaccinated"], ["description", "Dog"], ["created_at", "2020-03-04 05:20:38.467660"], ["updated_at", "2020-03-04 05:20:38.467660"], ["user_id", 1]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mListing Create (0.5ms)[0m  [1m[32mINSERT INTO "listings" ("name", "breed", "price", "documentation", "description", "created_at", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["name", "Peanut"], ["breed", "Yes"], ["price", 1000], ["documentation", "Vaccinated"], ["description", "Dog"], ["created_at", "2020-03-04 05:20:38.474299"], ["updated_at", "2020-03-04 05:20:38.474299"], ["user_id", 2]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mListing Create (0.6ms)[0m  [1m[32mINSERT INTO "listings" ("name", "breed", "price", "documentation", "description", "created_at", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["name", "Peanut"], ["breed", "Yes"], ["price", 1000], ["documentation", "Vaccinated"], ["description", "Dog"], ["created_at", "2020-03-04 05:20:38.481083"], ["updated_at", "2020-03-04 05:20:38.481083"], ["user_id", 2]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mListing Create (0.4ms)[0m  [1m[32mINSERT INTO "listings" ("name", "breed", "price", "documentation", "description", "created_at", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["name", "Charlie"], ["breed", "Corgi"], ["price", 1000], ["documentation", "Vaccinated"], ["description", "Dog"], ["created_at", "2020-03-04 05:20:38.487494"], ["updated_at", "2020-03-04 05:20:38.487494"], ["user_id", 1]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mListing Create (0.4ms)[0m  [1m[32mINSERT INTO "listings" ("name", "breed", "price", "documentation", "description", "created_at", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["name", "Charlie"], ["breed", "Corgi"], ["price", 1000], ["documentation", "Vaccinated"], ["description", "Dog"], ["created_at", "2020-03-04 05:20:38.493458"], ["updated_at", "2020-03-04 05:20:38.493458"], ["user_id", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mListing Create (0.3ms)[0m  [1m[32mINSERT INTO "listings" ("name", "breed", "price", "documentation", "description", "created_at", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["name", "Peanut"], ["breed", "Yes"], ["price", 1000], ["documentation", "Vaccinated"], ["description", "Dog"], ["created_at", "2020-03-04 05:20:38.498431"], ["updated_at", "2020-03-04 05:20:38.498431"], ["user_id", 2]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mListing Create (0.4ms)[0m  [1m[32mINSERT INTO "listings" ("name", "breed", "price", "documentation", "description", "created_at", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["name", "Peanut"], ["breed", "Yes"], ["price", 1000], ["documentation", "Vaccinated"], ["description", "Dog"], ["created_at", "2020-03-04 05:20:38.504025"], ["updated_at", "2020-03-04 05:20:38.504025"], ["user_id", 2]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (0.9ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "test1@dog.com"], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "test3@dog.com"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mListing Load (0.5ms)[0m  [1m[34mSELECT "listings".* FROM "listings" LIMIT $1[0m  [["LIMIT", 11]]
+Started POST "/users/sign_in" for ::1 at 2020-03-04 16:21:48 +1100
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"AbGZPkPgVCoSBGU5VgCoPsGhh4E4rkQBqwKM5WR6fUGHvlItmoO4liOk1uEk/KYhNcCu2nOEfbXIwND9i2ZClQ==", "user"=>{"email"=>"test1@dog.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "test1@dog.com"], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Completed 302 Found in 170ms (ActiveRecord: 9.1ms | Allocations: 15812)
+
+
+Started GET "/" for ::1 at 2020-03-04 16:21:48 +1100
+Processing by ListingsController#index as HTML
+  Rendering listings/index.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/listings/index.html.erb:3
+  [1m[36mListing Load (1.0ms)[0m  [1m[34mSELECT "listings".* FROM "listings"[0m
+  ↳ app/views/listings/index.html.erb:7
+  Rendered listings/index.html.erb within layouts/application (Duration: 36.5ms | Allocations: 9516)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navbar.html.erb (Duration: 1.4ms | Allocations: 244)
+Completed 200 OK in 80ms (Views: 61.0ms | ActiveRecord: 5.2ms | Allocations: 19292)
+
+
+Started GET "/listings/1/edit" for ::1 at 2020-03-04 16:21:59 +1100
+Processing by ListingsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mListing Load (0.8ms)[0m  [1m[34mSELECT "listings".* FROM "listings" WHERE "listings"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/listings_controller.rb:50:in `find_listing'
+  Rendering listings/edit.html.erb within layouts/application
+  Rendered listings/_form.html.erb (Duration: 17.5ms | Allocations: 3535)
+  Rendered listings/edit.html.erb within layouts/application (Duration: 20.5ms | Allocations: 3887)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navbar.html.erb (Duration: 0.8ms | Allocations: 61)
+Completed 200 OK in 54ms (Views: 39.7ms | ActiveRecord: 2.2ms | Allocations: 10808)
+
+
+Started GET "/listings/2/edit" for ::1 at 2020-03-04 16:22:02 +1100
+Processing by ListingsController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mListing Load (1.7ms)[0m  [1m[34mSELECT "listings".* FROM "listings" WHERE "listings"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/listings_controller.rb:50:in `find_listing'
+  Rendering listings/edit.html.erb within layouts/application
+  Rendered listings/_form.html.erb (Duration: 3.7ms | Allocations: 1618)
+  Rendered listings/edit.html.erb within layouts/application (Duration: 4.2ms | Allocations: 1717)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navbar.html.erb (Duration: 0.2ms | Allocations: 58)
+Completed 200 OK in 34ms (Views: 24.8ms | ActiveRecord: 2.8ms | Allocations: 8384)
+
+
+Started GET "/listings/3/edit" for ::1 at 2020-03-04 16:22:04 +1100
+Processing by ListingsController#edit as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mListing Load (1.1ms)[0m  [1m[34mSELECT "listings".* FROM "listings" WHERE "listings"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/listings_controller.rb:50:in `find_listing'
+  Rendering listings/edit.html.erb within layouts/application
+  Rendered listings/_form.html.erb (Duration: 6.7ms | Allocations: 1618)
+  Rendered listings/edit.html.erb within layouts/application (Duration: 7.1ms | Allocations: 1717)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navbar.html.erb (Duration: 0.3ms | Allocations: 58)
+Completed 200 OK in 36ms (Views: 23.4ms | ActiveRecord: 1.9ms | Allocations: 8376)
+
+
+Started GET "/listings/4/edit" for ::1 at 2020-03-04 16:22:06 +1100
+Processing by ListingsController#edit as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mUser Load (2.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mListing Load (3.4ms)[0m  [1m[34mSELECT "listings".* FROM "listings" WHERE "listings"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/listings_controller.rb:50:in `find_listing'
+  Rendering listings/edit.html.erb within layouts/application
+  Rendered listings/_form.html.erb (Duration: 3.6ms | Allocations: 1618)
+  Rendered listings/edit.html.erb within layouts/application (Duration: 4.1ms | Allocations: 1717)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navbar.html.erb (Duration: 0.2ms | Allocations: 58)
+Completed 200 OK in 32ms (Views: 20.9ms | ActiveRecord: 6.1ms | Allocations: 8371)
+
+
+Started GET "/listings/1" for ::1 at 2020-03-04 16:22:10 +1100
+Processing by ListingsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mListing Load (1.1ms)[0m  [1m[34mSELECT "listings".* FROM "listings" WHERE "listings"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/listings_controller.rb:50:in `find_listing'
+  Rendering listings/show.html.erb within layouts/application
+  Rendered listings/show.html.erb within layouts/application (Duration: 177.1ms | Allocations: 83499)
+Completed 500 Internal Server Error in 183ms (ActiveRecord: 1.1ms | Allocations: 85035)
+
+
+  
+ActionView::Template::Error (undefined method `user_path' for #<#<Class:0x00007fc595482710>:0x00007fc597087820>):
+    4: <p><%= @listing.documentation %></p>
+    5: <p><%= @listing.description%></p>
+    6: 
+    7: <%= link_to 'Seller info', user_path(@listing.user_id)  %>
+    8: <%= link_to 'SHOW PROFILE', user_profile_path  %>
+    9: 
+   10: <%= link_to 'Back', listings_path %>
+  
+app/views/listings/show.html.erb:7
+Started GET "/" for ::1 at 2020-03-04 16:22:12 +1100
+Processing by ListingsController#index as HTML
+  Rendering listings/index.html.erb within layouts/application
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/listings/index.html.erb:3
+  [1m[36mListing Load (0.6ms)[0m  [1m[34mSELECT "listings".* FROM "listings"[0m
+  ↳ app/views/listings/index.html.erb:7
+  Rendered listings/index.html.erb within layouts/application (Duration: 7.9ms | Allocations: 2628)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navbar.html.erb (Duration: 0.2ms | Allocations: 50)
+Completed 200 OK in 25ms (Views: 21.7ms | ActiveRecord: 1.3ms | Allocations: 7318)
+
+
+Started GET "/listings/2" for ::1 at 2020-03-04 16:22:13 +1100
+Processing by ListingsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mListing Load (0.7ms)[0m  [1m[34mSELECT "listings".* FROM "listings" WHERE "listings"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/listings_controller.rb:50:in `find_listing'
+  Rendering listings/show.html.erb within layouts/application
+  Rendered listings/show.html.erb within layouts/application (Duration: 173.0ms | Allocations: 83272)
+Completed 500 Internal Server Error in 177ms (ActiveRecord: 0.7ms | Allocations: 84673)
+
+
+  
+ActionView::Template::Error (undefined method `user_path' for #<#<Class:0x00007fc595482710>:0x00007fc5921c3c20>):
+    4: <p><%= @listing.documentation %></p>
+    5: <p><%= @listing.description%></p>
+    6: 
+    7: <%= link_to 'Seller info', user_path(@listing.user_id)  %>
+    8: <%= link_to 'SHOW PROFILE', user_profile_path  %>
+    9: 
+   10: <%= link_to 'Back', listings_path %>
+  
+app/views/listings/show.html.erb:7
+Started GET "/" for ::1 at 2020-03-04 16:22:15 +1100
+Processing by ListingsController#index as HTML
+  Rendering listings/index.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/listings/index.html.erb:3
+  [1m[36mListing Load (0.3ms)[0m  [1m[34mSELECT "listings".* FROM "listings"[0m
+  ↳ app/views/listings/index.html.erb:7
+  Rendered listings/index.html.erb within layouts/application (Duration: 4.2ms | Allocations: 2586)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navbar.html.erb (Duration: 0.2ms | Allocations: 48)
+Completed 200 OK in 15ms (Views: 14.0ms | ActiveRecord: 0.6ms | Allocations: 7228)
+
+
+Started GET "/listings/4" for ::1 at 2020-03-04 16:22:17 +1100
+Processing by ListingsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mListing Load (0.3ms)[0m  [1m[34mSELECT "listings".* FROM "listings" WHERE "listings"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/listings_controller.rb:50:in `find_listing'
+  Rendering listings/show.html.erb within layouts/application
+  Rendered listings/show.html.erb within layouts/application (Duration: 182.3ms | Allocations: 83263)
+Completed 500 Internal Server Error in 187ms (ActiveRecord: 0.3ms | Allocations: 84655)
+
+
+  
+ActionView::Template::Error (undefined method `user_path' for #<#<Class:0x00007fc595482710>:0x00007fc5970f5af0>):
+    4: <p><%= @listing.documentation %></p>
+    5: <p><%= @listing.description%></p>
+    6: 
+    7: <%= link_to 'Seller info', user_path(@listing.user_id)  %>
+    8: <%= link_to 'SHOW PROFILE', user_profile_path  %>
+    9: 
+   10: <%= link_to 'Back', listings_path %>
+  
+app/views/listings/show.html.erb:7
+Started GET "/" for ::1 at 2020-03-04 16:22:18 +1100
+Processing by ListingsController#index as HTML
+  Rendering listings/index.html.erb within layouts/application
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/listings/index.html.erb:3
+  [1m[36mListing Load (2.3ms)[0m  [1m[34mSELECT "listings".* FROM "listings"[0m
+  ↳ app/views/listings/index.html.erb:7
+  Rendered listings/index.html.erb within layouts/application (Duration: 10.5ms | Allocations: 2586)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navbar.html.erb (Duration: 0.2ms | Allocations: 48)
+Completed 200 OK in 25ms (Views: 20.4ms | ActiveRecord: 3.4ms | Allocations: 7228)
+
+
+Started DELETE "/listings/1" for ::1 at 2020-03-04 16:22:21 +1100
+Processing by ListingsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"xFoMhL4zmscuF2z1FQjaS5PsjcpQN8SO9A/kpK67nc1A5uOuu8LMgtOjvhKg9sP9ik2b8oxuF8KoL2+Zb7R+uQ==", "id"=>"1"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mListing Load (0.7ms)[0m  [1m[34mSELECT "listings".* FROM "listings" WHERE "listings"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/listings_controller.rb:50:in `find_listing'
+  [1m[36mListing Destroy (0.9ms)[0m  [1m[31mDELETE FROM "listings" WHERE "listings"."id" = $1[0m  [["id", 1]]
+  ↳ app/controllers/listings_controller.rb:38:in `destroy'
+Redirected to http://localhost:3000/listings
+Completed 302 Found in 11ms (ActiveRecord: 2.1ms | Allocations: 3158)
+
+
+Started GET "/listings" for ::1 at 2020-03-04 16:22:21 +1100
+Processing by ListingsController#index as HTML
+  Rendering listings/index.html.erb within layouts/application
+  [1m[36mUser Load (2.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/listings/index.html.erb:3
+  [1m[36mListing Load (0.5ms)[0m  [1m[34mSELECT "listings".* FROM "listings"[0m
+  ↳ app/views/listings/index.html.erb:7
+  Rendered listings/index.html.erb within layouts/application (Duration: 9.8ms | Allocations: 2460)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navbar.html.erb (Duration: 0.2ms | Allocations: 48)
+Completed 200 OK in 18ms (Views: 14.2ms | ActiveRecord: 2.8ms | Allocations: 7097)
+
+
+Started DELETE "/listings/2" for ::1 at 2020-03-04 16:22:23 +1100
+Processing by ListingsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"B+E8juRhmIyxM0lJl7zWa9iFR1plKKBde9E9SkDyQQKDXdOk4ZDOyUyHm64iQs/dwSRRYrlxcxEn8bZ3gf2idg==", "id"=>"2"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mListing Load (0.3ms)[0m  [1m[34mSELECT "listings".* FROM "listings" WHERE "listings"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/listings_controller.rb:50:in `find_listing'
+  [1m[36mListing Destroy (0.6ms)[0m  [1m[31mDELETE FROM "listings" WHERE "listings"."id" = $1[0m  [["id", 2]]
+  ↳ app/controllers/listings_controller.rb:38:in `destroy'
+Redirected to http://localhost:3000/listings
+Completed 302 Found in 8ms (ActiveRecord: 1.1ms | Allocations: 3137)
+
+
+Started GET "/listings" for ::1 at 2020-03-04 16:22:23 +1100
+Processing by ListingsController#index as HTML
+  Rendering listings/index.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/listings/index.html.erb:3
+  [1m[36mListing Load (0.8ms)[0m  [1m[34mSELECT "listings".* FROM "listings"[0m
+  ↳ app/views/listings/index.html.erb:7
+  Rendered listings/index.html.erb within layouts/application (Duration: 7.1ms | Allocations: 2333)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navbar.html.erb (Duration: 0.1ms | Allocations: 48)
+Completed 200 OK in 14ms (Views: 12.5ms | ActiveRecord: 1.1ms | Allocations: 6971)
+
+
+Started DELETE "/listings/3" for ::1 at 2020-03-04 16:22:25 +1100
+Processing by ListingsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"0+5cOwSt2rF9oHWYaEYZumOjXCFEj955bTGHz/B8ZkFXUrMRAVyM9IAUp3/duAAMegJKGZjWDTUxEQzyMXOFNQ==", "id"=>"3"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mListing Load (0.3ms)[0m  [1m[34mSELECT "listings".* FROM "listings" WHERE "listings"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/listings_controller.rb:50:in `find_listing'
+  [1m[36mListing Destroy (0.8ms)[0m  [1m[31mDELETE FROM "listings" WHERE "listings"."id" = $1[0m  [["id", 3]]
+  ↳ app/controllers/listings_controller.rb:38:in `destroy'
+Redirected to http://localhost:3000/listings
+Completed 302 Found in 8ms (ActiveRecord: 1.4ms | Allocations: 3144)
+
+
+Started GET "/listings" for ::1 at 2020-03-04 16:22:25 +1100
+Processing by ListingsController#index as HTML
+  Rendering listings/index.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/listings/index.html.erb:3
+  [1m[36mListing Load (0.3ms)[0m  [1m[34mSELECT "listings".* FROM "listings"[0m
+  ↳ app/views/listings/index.html.erb:7
+  Rendered listings/index.html.erb within layouts/application (Duration: 3.5ms | Allocations: 2206)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navbar.html.erb (Duration: 0.1ms | Allocations: 48)
+Completed 200 OK in 12ms (Views: 10.9ms | ActiveRecord: 0.5ms | Allocations: 6836)
+
+
+Started DELETE "/listings/5" for ::1 at 2020-03-04 16:22:26 +1100
+Processing by ListingsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"IEV2O6frHikyv5RNAX2Nh8JAVukxdiyXR9jxiNq8BOCk+ZkRohpIbM8LRqq0g5Qx2+FA0e0v/9sb+Hq1G7PnlA==", "id"=>"5"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mListing Load (0.3ms)[0m  [1m[34mSELECT "listings".* FROM "listings" WHERE "listings"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/listings_controller.rb:50:in `find_listing'
+  [1m[36mListing Destroy (0.8ms)[0m  [1m[31mDELETE FROM "listings" WHERE "listings"."id" = $1[0m  [["id", 5]]
+  ↳ app/controllers/listings_controller.rb:38:in `destroy'
+Redirected to http://localhost:3000/listings
+Completed 302 Found in 9ms (ActiveRecord: 1.5ms | Allocations: 3136)
+
+
+Started GET "/listings" for ::1 at 2020-03-04 16:22:26 +1100
+Processing by ListingsController#index as HTML
+  Rendering listings/index.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/listings/index.html.erb:3
+  [1m[36mListing Load (0.4ms)[0m  [1m[34mSELECT "listings".* FROM "listings"[0m
+  ↳ app/views/listings/index.html.erb:7
+  Rendered listings/index.html.erb within layouts/application (Duration: 4.4ms | Allocations: 2079)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navbar.html.erb (Duration: 0.1ms | Allocations: 48)
+Completed 200 OK in 12ms (Views: 10.0ms | ActiveRecord: 0.6ms | Allocations: 6719)
+
+
+Started DELETE "/listings/6" for ::1 at 2020-03-04 16:22:28 +1100
+Processing by ListingsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"54GQAT+4up48RdbMDvj1FWsr6UhXLy5awTQKhR4EqkZjPX8rOkns28HxBCu7Buyjcor/cIt2/RadFIG43wtJMg==", "id"=>"6"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mListing Load (0.1ms)[0m  [1m[34mSELECT "listings".* FROM "listings" WHERE "listings"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/listings_controller.rb:50:in `find_listing'
+  [1m[36mListing Destroy (6.0ms)[0m  [1m[31mDELETE FROM "listings" WHERE "listings"."id" = $1[0m  [["id", 6]]
+  ↳ app/controllers/listings_controller.rb:38:in `destroy'
+Redirected to http://localhost:3000/listings
+Completed 302 Found in 11ms (ActiveRecord: 6.3ms | Allocations: 3135)
+
+
+Started GET "/listings" for ::1 at 2020-03-04 16:22:28 +1100
+Processing by ListingsController#index as HTML
+  Rendering listings/index.html.erb within layouts/application
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/listings/index.html.erb:3
+  [1m[36mListing Load (0.3ms)[0m  [1m[34mSELECT "listings".* FROM "listings"[0m
+  ↳ app/views/listings/index.html.erb:7
+  Rendered listings/index.html.erb within layouts/application (Duration: 4.8ms | Allocations: 1951)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navbar.html.erb (Duration: 0.2ms | Allocations: 48)
+Completed 200 OK in 13ms (Views: 10.5ms | ActiveRecord: 0.9ms | Allocations: 6589)
+
+
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (157.0ms)[0m  [1m[35mDROP DATABASE IF EXISTS "Marketplace_development"[0m
+  [1m[35m (141.9ms)[0m  [1m[35mDROP DATABASE IF EXISTS "Marketplace_test"[0m
+  [1m[35m (451.9ms)[0m  [1m[35mCREATE DATABASE "Marketplace_development" ENCODING = 'unicode'[0m
+  [1m[35m (284.0ms)[0m  [1m[35mCREATE DATABASE "Marketplace_test" ENCODING = 'unicode'[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "listings" CASCADE[0m
+  [1m[35m (12.6ms)[0m  [1m[35mCREATE TABLE "listings" ("id" bigserial primary key, "name" character varying, "breed" character varying, "price" integer, "documentation" text, "description" text, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL, "user_id" bigint NOT NULL)[0m
+  [1m[35m (1.3ms)[0m  [1m[35mCREATE  INDEX  "index_listings_on_user_id" ON "listings"  ("user_id")[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "users" CASCADE[0m
+  [1m[35m (5.7ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "email" character varying DEFAULT '' NOT NULL, "encrypted_password" character varying DEFAULT '' NOT NULL, "reset_password_token" character varying, "reset_password_sent_at" timestamp, "remember_created_at" timestamp, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (1.8ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_users_on_email" ON "users"  ("email")[0m
+  [1m[35m (1.7ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_users_on_reset_password_token" ON "users"  ("reset_password_token")[0m
+  [1m[35m (3.2ms)[0m  [1m[35mALTER TABLE "listings" ADD CONSTRAINT "fk_rails_baa008bfd2"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+[0m
+  [1m[35m (3.4ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.6ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20200303120822)[0m
+  [1m[35m (0.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20200303042757),
+(20200303111350);
+
+[0m
+  [1m[35m (3.1ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.5ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2020-03-04 05:22:59.846422"], ["updated_at", "2020-03-04 05:22:59.846422"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "schema_sha1"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.3ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "schema_sha1"], ["value", "96e5ebd11bde753487160c8a06a2918d151b1c3e"], ["created_at", "2020-03-04 05:22:59.854243"], ["updated_at", "2020-03-04 05:22:59.854243"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "listings" CASCADE[0m
+  [1m[35m (11.6ms)[0m  [1m[35mCREATE TABLE "listings" ("id" bigserial primary key, "name" character varying, "breed" character varying, "price" integer, "documentation" text, "description" text, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL, "user_id" bigint NOT NULL)[0m
+  [1m[35m (1.5ms)[0m  [1m[35mCREATE  INDEX  "index_listings_on_user_id" ON "listings"  ("user_id")[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "users" CASCADE[0m
+  [1m[35m (6.6ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "email" character varying DEFAULT '' NOT NULL, "encrypted_password" character varying DEFAULT '' NOT NULL, "reset_password_token" character varying, "reset_password_sent_at" timestamp, "remember_created_at" timestamp, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (1.8ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_users_on_email" ON "users"  ("email")[0m
+  [1m[35m (1.3ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_users_on_reset_password_token" ON "users"  ("reset_password_token")[0m
+  [1m[35m (2.6ms)[0m  [1m[35mALTER TABLE "listings" ADD CONSTRAINT "fk_rails_baa008bfd2"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+[0m
+  [1m[35m (3.2ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.6ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20200303120822)[0m
+  [1m[35m (0.7ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20200303042757),
+(20200303111350);
+
+[0m
+  [1m[35m (4.2ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.4ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2020-03-04 05:22:59.939474"], ["updated_at", "2020-03-04 05:22:59.939474"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Update (0.3ms)[0m  [1m[33mUPDATE "ar_internal_metadata" SET "value" = $1, "updated_at" = $2 WHERE "ar_internal_metadata"."key" = $3[0m  [["value", "test"], ["updated_at", "2020-03-04 05:22:59.945453"], ["key", "environment"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "schema_sha1"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.2ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "schema_sha1"], ["value", "96e5ebd11bde753487160c8a06a2918d151b1c3e"], ["created_at", "2020-03-04 05:22:59.950415"], ["updated_at", "2020-03-04 05:22:59.950415"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (0.8ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "test1@dog.com"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.7ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["email", "test1@dog.com"], ["encrypted_password", "$2a$11$poNQ5ROO2TlcIgKKLqNmVeMuHa747Sr1nnrwzR5PJySy2opzCLPOq"], ["created_at", "2020-03-04 05:23:00.112077"], ["updated_at", "2020-03-04 05:23:00.112077"]]
+  [1m[35m (5.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "test3@dog.com"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["email", "test3@dog.com"], ["encrypted_password", "$2a$11$OVgVCegkj6cPpzOn6PmtCu2L5DDq8.OVtIr2dA/xMsZA1.X7f9jxO"], ["created_at", "2020-03-04 05:23:00.231918"], ["updated_at", "2020-03-04 05:23:00.231918"]]
+  [1m[35m (5.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mListing Create (1.9ms)[0m  [1m[32mINSERT INTO "listings" ("name", "breed", "price", "documentation", "description", "created_at", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["name", "Charlie"], ["breed", "Corgi"], ["price", 1000], ["documentation", "Vaccinated"], ["description", "Dog"], ["created_at", "2020-03-04 05:23:00.267302"], ["updated_at", "2020-03-04 05:23:00.267302"], ["user_id", 1]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mListing Create (0.5ms)[0m  [1m[32mINSERT INTO "listings" ("name", "breed", "price", "documentation", "description", "created_at", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["name", "Charlie"], ["breed", "Corgi"], ["price", 1000], ["documentation", "Vaccinated"], ["description", "Dog"], ["created_at", "2020-03-04 05:23:00.275729"], ["updated_at", "2020-03-04 05:23:00.275729"], ["user_id", 1]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mListing Create (0.4ms)[0m  [1m[32mINSERT INTO "listings" ("name", "breed", "price", "documentation", "description", "created_at", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["name", "Peanut"], ["breed", "Yes"], ["price", 1000], ["documentation", "Vaccinated"], ["description", "Dog"], ["created_at", "2020-03-04 05:23:00.281837"], ["updated_at", "2020-03-04 05:23:00.281837"], ["user_id", 2]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mListing Create (0.4ms)[0m  [1m[32mINSERT INTO "listings" ("name", "breed", "price", "documentation", "description", "created_at", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["name", "Peanut"], ["breed", "Yes"], ["price", 1000], ["documentation", "Vaccinated"], ["description", "Dog"], ["created_at", "2020-03-04 05:23:00.287281"], ["updated_at", "2020-03-04 05:23:00.287281"], ["user_id", 2]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mListing Create (0.4ms)[0m  [1m[32mINSERT INTO "listings" ("name", "breed", "price", "documentation", "description", "created_at", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["name", "Charlie"], ["breed", "Corgi"], ["price", 1000], ["documentation", "Vaccinated"], ["description", "Dog"], ["created_at", "2020-03-04 05:23:00.292461"], ["updated_at", "2020-03-04 05:23:00.292461"], ["user_id", 1]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mListing Create (0.4ms)[0m  [1m[32mINSERT INTO "listings" ("name", "breed", "price", "documentation", "description", "created_at", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["name", "Charlie"], ["breed", "Corgi"], ["price", 1000], ["documentation", "Vaccinated"], ["description", "Dog"], ["created_at", "2020-03-04 05:23:00.297705"], ["updated_at", "2020-03-04 05:23:00.297705"], ["user_id", 1]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mListing Create (0.4ms)[0m  [1m[32mINSERT INTO "listings" ("name", "breed", "price", "documentation", "description", "created_at", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["name", "Peanut"], ["breed", "Yes"], ["price", 1000], ["documentation", "Vaccinated"], ["description", "Dog"], ["created_at", "2020-03-04 05:23:00.303046"], ["updated_at", "2020-03-04 05:23:00.303046"], ["user_id", 2]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mListing Create (0.4ms)[0m  [1m[32mINSERT INTO "listings" ("name", "breed", "price", "documentation", "description", "created_at", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["name", "Peanut"], ["breed", "Yes"], ["price", 1000], ["documentation", "Vaccinated"], ["description", "Dog"], ["created_at", "2020-03-04 05:23:00.308861"], ["updated_at", "2020-03-04 05:23:00.308861"], ["user_id", 2]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (1.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "test1@dog.com"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "test3@dog.com"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mListing Load (1.2ms)[0m  [1m[34mSELECT "listings".* FROM "listings" LIMIT $1[0m  [["LIMIT", 11]]
+Started GET "/" for ::1 at 2020-03-04 16:30:27 +1100
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ListingsController#index as HTML
+  Rendering listings/index.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/listings/index.html.erb:3
+  [1m[36mListing Load (0.6ms)[0m  [1m[34mSELECT "listings".* FROM "listings"[0m
+  ↳ app/views/listings/index.html.erb:7
+  Rendered listings/index.html.erb within layouts/application (Duration: 59.7ms | Allocations: 15905)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navbar.html.erb (Duration: 1.9ms | Allocations: 283)
+Completed 200 OK in 113ms (Views: 70.4ms | ActiveRecord: 26.1ms | Allocations: 26708)
+
+
+Started GET "/users/sign_in" for ::1 at 2020-03-04 16:31:10 +1100
+Processing by Devise::SessionsController#new as HTML
+  Rendering /Users/tx/.rvm/gems/ruby-2.5.1/gems/devise-4.7.1/app/views/devise/sessions/new.html.erb within layouts/application
+  Rendered /Users/tx/.rvm/gems/ruby-2.5.1/gems/devise-4.7.1/app/views/devise/shared/_links.html.erb (Duration: 1.8ms | Allocations: 657)
+  Rendered /Users/tx/.rvm/gems/ruby-2.5.1/gems/devise-4.7.1/app/views/devise/sessions/new.html.erb within layouts/application (Duration: 23.7ms | Allocations: 5879)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navbar.html.erb (Duration: 0.5ms | Allocations: 112)
+Completed 200 OK in 47ms (Views: 41.5ms | ActiveRecord: 0.0ms | Allocations: 12483)
+
+
+Started POST "/users/sign_in" for ::1 at 2020-03-04 16:31:15 +1100
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"0CjRHweSzYXprm4i9HFwJbpNxpqC7yUShoWD20oM3TXfImGkxynB7oMmVUWtW5kiyueGbiZk+iWnDcQ2MGWTkw==", "user"=>{"email"=>"test1@dog.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "test1@dog.com"], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Completed 302 Found in 132ms (ActiveRecord: 1.0ms | Allocations: 6289)
+
+
+Started GET "/" for ::1 at 2020-03-04 16:31:15 +1100
+Processing by ListingsController#index as HTML
+  Rendering listings/index.html.erb within layouts/application
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/listings/index.html.erb:3
+  [1m[36mListing Load (0.4ms)[0m  [1m[34mSELECT "listings".* FROM "listings"[0m
+  ↳ app/views/listings/index.html.erb:7
+  Rendered listings/index.html.erb within layouts/application (Duration: 4.2ms | Allocations: 2085)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navbar.html.erb (Duration: 0.1ms | Allocations: 50)
+Completed 200 OK in 12ms (Views: 10.3ms | ActiveRecord: 1.0ms | Allocations: 6726)
+
+
+Started DELETE "/users/sign_out" for ::1 at 2020-03-04 16:31:20 +1100
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"yfAu/b4zLZXmUlUtzWob7f64SvW+BF9EtVpJCQIIiW8E2jSLzlsf/y5RcvXi8bxXeWwiVghxp6FVnAqtxysB6g=="}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Completed 302 Found in 10ms (ActiveRecord: 0.8ms | Allocations: 3272)
+
+
+Started GET "/" for ::1 at 2020-03-04 16:31:20 +1100
+Processing by ListingsController#index as HTML
+  Rendering listings/index.html.erb within layouts/application
+  [1m[36mListing Load (0.3ms)[0m  [1m[34mSELECT "listings".* FROM "listings"[0m
+  ↳ app/views/listings/index.html.erb:7
+  Rendered listings/index.html.erb within layouts/application (Duration: 2.1ms | Allocations: 1405)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navbar.html.erb (Duration: 0.2ms | Allocations: 89)
+Completed 200 OK in 10ms (Views: 9.2ms | ActiveRecord: 0.3ms | Allocations: 6067)
+
+
+Started GET "/users/sign_in" for ::1 at 2020-03-04 16:31:22 +1100
+Processing by Devise::SessionsController#new as HTML
+  Rendering /Users/tx/.rvm/gems/ruby-2.5.1/gems/devise-4.7.1/app/views/devise/sessions/new.html.erb within layouts/application
+  Rendered /Users/tx/.rvm/gems/ruby-2.5.1/gems/devise-4.7.1/app/views/devise/shared/_links.html.erb (Duration: 0.3ms | Allocations: 136)
+  Rendered /Users/tx/.rvm/gems/ruby-2.5.1/gems/devise-4.7.1/app/views/devise/sessions/new.html.erb within layouts/application (Duration: 3.0ms | Allocations: 1114)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navbar.html.erb (Duration: 0.4ms | Allocations: 106)
+Completed 200 OK in 15ms (Views: 13.0ms | ActiveRecord: 0.0ms | Allocations: 6062)
+
+
+Started POST "/users/sign_in" for ::1 at 2020-03-04 16:31:29 +1100
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"LnrkrQmsOWBhBdQGdmwVHJbvLMPOGq+ODikZm9s+0bSS25o9wel/G4ytH0mm6iZ0mk2Kh8l8JMFjXfAcbxvlfg==", "user"=>{"email"=>"test3@dog.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "test3@dog.com"], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Completed 302 Found in 115ms (ActiveRecord: 1.1ms | Allocations: 3065)
+
+
+Started GET "/" for ::1 at 2020-03-04 16:31:29 +1100
+Processing by ListingsController#index as HTML
+  Rendering listings/index.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/listings/index.html.erb:3
+  [1m[36mListing Load (0.4ms)[0m  [1m[34mSELECT "listings".* FROM "listings"[0m
+  ↳ app/views/listings/index.html.erb:7
+  Rendered listings/index.html.erb within layouts/application (Duration: 4.9ms | Allocations: 2071)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navbar.html.erb (Duration: 0.1ms | Allocations: 48)
+Completed 200 OK in 14ms (Views: 10.9ms | ActiveRecord: 0.9ms | Allocations: 6702)
+
+
+Started DELETE "/users/sign_out" for ::1 at 2020-03-04 16:31:32 +1100
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"a9wuz2eqi59Hp23NjHpK3gPACXddw8hm57UM7GhHmeMnFUH9OZhTpxpbqIbgEWISBhnWyJBXSxcs39H/zdEeDw=="}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Completed 302 Found in 5ms (ActiveRecord: 0.3ms | Allocations: 2505)
+
+
+Started GET "/" for ::1 at 2020-03-04 16:31:32 +1100
+Processing by ListingsController#index as HTML
+  Rendering listings/index.html.erb within layouts/application
+  [1m[36mListing Load (0.5ms)[0m  [1m[34mSELECT "listings".* FROM "listings"[0m
+  ↳ app/views/listings/index.html.erb:7
+  Rendered listings/index.html.erb within layouts/application (Duration: 3.7ms | Allocations: 1404)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navbar.html.erb (Duration: 0.3ms | Allocations: 87)
+Completed 200 OK in 13ms (Views: 11.1ms | ActiveRecord: 0.5ms | Allocations: 6064)
+
+
+Started GET "/users/sign_in" for ::1 at 2020-03-04 16:31:33 +1100
+Processing by Devise::SessionsController#new as HTML
+  Rendering /Users/tx/.rvm/gems/ruby-2.5.1/gems/devise-4.7.1/app/views/devise/sessions/new.html.erb within layouts/application
+  Rendered /Users/tx/.rvm/gems/ruby-2.5.1/gems/devise-4.7.1/app/views/devise/shared/_links.html.erb (Duration: 0.4ms | Allocations: 136)
+  Rendered /Users/tx/.rvm/gems/ruby-2.5.1/gems/devise-4.7.1/app/views/devise/sessions/new.html.erb within layouts/application (Duration: 4.4ms | Allocations: 1109)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navbar.html.erb (Duration: 0.4ms | Allocations: 106)
+Completed 200 OK in 24ms (Views: 22.2ms | ActiveRecord: 0.0ms | Allocations: 6046)
+
+
+Started POST "/users/sign_in" for ::1 at 2020-03-04 16:31:37 +1100
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"qkl3gQiY5M7ppgTyZ1WCTZYnhUQ/p5rswn/+bw9t6idy9lO65Rnfyfvi6pYkHVRy+Hk5uM0dL9LTjYAeMUEjOQ==", "user"=>{"email"=>"test1@dog.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "test1@dog.com"], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Completed 302 Found in 116ms (ActiveRecord: 0.7ms | Allocations: 3064)
+
+
+Started GET "/" for ::1 at 2020-03-04 16:31:37 +1100
+Processing by ListingsController#index as HTML
+  Rendering listings/index.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/listings/index.html.erb:3
+  [1m[36mListing Load (1.2ms)[0m  [1m[34mSELECT "listings".* FROM "listings"[0m
+  ↳ app/views/listings/index.html.erb:7
+  Rendered listings/index.html.erb within layouts/application (Duration: 6.1ms | Allocations: 2071)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navbar.html.erb (Duration: 0.1ms | Allocations: 48)
+Completed 200 OK in 18ms (Views: 15.5ms | ActiveRecord: 1.5ms | Allocations: 6704)
+
+
+Started GET "/" for ::1 at 2020-03-04 16:34:01 +1100
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ListingsController#index as HTML
+  Rendering listings/index.html.erb within layouts/application
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/listings/index.html.erb:3
+  [1m[36mListing Load (0.6ms)[0m  [1m[34mSELECT "listings".* FROM "listings"[0m
+  ↳ app/views/listings/index.html.erb:7
+  Rendered listings/index.html.erb within layouts/application (Duration: 45.9ms | Allocations: 15923)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navbar.html.erb (Duration: 1.2ms | Allocations: 244)
+Completed 200 OK in 93ms (Views: 69.3ms | ActiveRecord: 11.1ms | Allocations: 26683)
+
+
