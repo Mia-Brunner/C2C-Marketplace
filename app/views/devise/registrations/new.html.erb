@@ -6,13 +6,18 @@
 
 
     <div class="field">
-      <%= f.label :firstname %><br />
+      <%= f.label :firstname, "First Name" %><br />
       <%= f.text_field :firstname, autofocus: true, autocomplete: "firstname", class:"newlabel" %>
     </div>
 
     <div class="field">
-      <%= f.label :lastname %><br />
+      <%= f.label :lastname, "Last Name" %><br />
       <%= f.text_field :lastname, autofocus: true, autocomplete: "lastname", class:"newlabel" %>
+    </div>
+
+      <div class="field">
+      <%= f.label :phone, "Phone Number" %><br />
+      <%= f.email_field :phone, autofocus: true, autocomplete: "phone", class:"newlabel" %>
     </div>
 
     <div class="field">
