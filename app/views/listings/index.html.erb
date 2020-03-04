@@ -9,6 +9,10 @@
     <%= listing.name %>
     <%= listing.breed %>
     <%= listing.price %>
+    <small>
+    Listing Created: <%= time_ago_in_words(listing.created_at) %> ago
+    Last Updated: <%= time_ago_in_words(listing.updated_at) %> ago.
+    </small>
     <%= link_to 'View', listing_path(listing) %>     
     <% if user_signed_in? && listing.user_id == current_user.id %>
       <%= link_to 'Edit', edit_listing_path(listing) %> 

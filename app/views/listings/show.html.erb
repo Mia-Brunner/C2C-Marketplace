@@ -4,5 +4,8 @@
 <p><%= @listing.documentation %></p>
 <p><%= @listing.description%></p>
 
+<p><%= @listing.user.firstname %></p>
+<p><%= @listing.user.email %></p>
+<h1><%= @listing.user.phone %></h1>
 
 <%= link_to 'Back', listings_path %>

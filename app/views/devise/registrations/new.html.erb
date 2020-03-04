@@ -17,7 +17,7 @@
 
       <div class="field">
       <%= f.label :phone, "Phone Number" %><br />
-      <%= f.email_field :phone, autofocus: true, autocomplete: "phone", class:"newlabel" %>
+      <%= f.telephone_field :phone, autofocus: true, autocomplete: "phone", class:"newlabel" %>
     </div>
 
     <div class="field">
@@ -36,11 +36,6 @@
     <div class="field">
       <%= f.label :password_confirmation %><br />
       <%= f.password_field :password_confirmation, autocomplete: "new-password", class:"newlabel" %>
-    </div>
-
-    <div class="imagefield">
-      <%= f.label :image_upload %><br />
-      <%= f.file_field :avatar, class:"newavatar" %>
     </div>
     <br>    
     <div class="actions">
