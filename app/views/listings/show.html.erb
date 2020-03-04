@@ -8,4 +8,11 @@
 <p><%= @listing.user.email %></p>
 <h1><%= @listing.user.phone %></h1>
 
+<% (0...@listing.images.count).each do |image| %>
+<div style="width:300px; height:300px;">
+  <%= image_tag(@listing.images[image], style: 'width:100%; height: auto')  %>
+  </div>
+<% end %>
+
+
 <%= link_to 'Back', listings_path %>
