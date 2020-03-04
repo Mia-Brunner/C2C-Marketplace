@@ -1992,3 +1992,1063 @@ Processing by ListingsController#index as HTML
 Completed 200 OK in 93ms (Views: 69.3ms | ActiveRecord: 11.1ms | Allocations: 26683)
 
 
+Started GET "/" for ::1 at 2020-03-04 16:42:35 +1100
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ListingsController#index as HTML
+  Rendering listings/index.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/listings/index.html.erb:3
+  [1m[36mListing Load (0.8ms)[0m  [1m[34mSELECT "listings".* FROM "listings"[0m
+  ↳ app/views/listings/index.html.erb:7
+  Rendered listings/index.html.erb within layouts/application (Duration: 43.6ms | Allocations: 15923)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navbar.html.erb (Duration: 1.4ms | Allocations: 244)
+Completed 200 OK in 98ms (Views: 74.9ms | ActiveRecord: 11.6ms | Allocations: 26691)
+
+
+Started GET "/listings/1" for ::1 at 2020-03-04 16:42:38 +1100
+Processing by ListingsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mListing Load (0.5ms)[0m  [1m[34mSELECT "listings".* FROM "listings" WHERE "listings"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/listings_controller.rb:51:in `find_listing'
+  Rendering listings/show.html.erb within layouts/application
+  Rendered listings/show.html.erb within layouts/application (Duration: 184.4ms | Allocations: 84142)
+Completed 500 Internal Server Error in 193ms (ActiveRecord: 0.5ms | Allocations: 85816)
+
+
+  
+ActionView::Template::Error (undefined method `user_path' for #<#<Class:0x00007ff67c1fe0a8>:0x00007ff67f3431e0>):
+    4: <p><%= @listing.documentation %></p>
+    5: <p><%= @listing.description%></p>
+    6: 
+    7: <%= link_to 'Seller info', user_path(@listing.user_id)  %>
+    8: <%= link_to 'SHOW PROFILE', user_profile_path  %>
+    9: 
+   10: <%= link_to 'Back', listings_path %>
+  
+app/views/listings/show.html.erb:7
+Started GET "/listings/1" for ::1 at 2020-03-04 16:43:20 +1100
+Processing by ListingsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mListing Load (0.5ms)[0m  [1m[34mSELECT "listings".* FROM "listings" WHERE "listings"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/listings_controller.rb:51:in `find_listing'
+  Rendering listings/show.html.erb within layouts/application
+  Rendered listings/show.html.erb within layouts/application (Duration: 297.1ms | Allocations: 163733)
+Completed 500 Internal Server Error in 302ms (ActiveRecord: 0.5ms | Allocations: 166029)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `user_profile_path' for #<#<Class:0x00007ff680997400>:0x00007ff6809959c0>
+Did you mean?  user_session_path):
+    4: <p><%= @listing.documentation %></p>
+    5: <p><%= @listing.description%></p>
+    6: 
+    7: <%= link_to 'SHOW PROFILE', user_profile_path  %>
+    8: 
+    9: <%= link_to 'Back', listings_path %>
+  
+app/views/listings/show.html.erb:7
+Started GET "/" for ::1 at 2020-03-04 16:43:34 +1100
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ListingsController#index as HTML
+  Rendering listings/index.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/listings/index.html.erb:3
+  [1m[36mListing Load (0.6ms)[0m  [1m[34mSELECT "listings".* FROM "listings"[0m
+  ↳ app/views/listings/index.html.erb:7
+  Rendered listings/index.html.erb within layouts/application (Duration: 43.6ms | Allocations: 15923)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navbar.html.erb (Duration: 0.9ms | Allocations: 244)
+Completed 200 OK in 81ms (Views: 58.4ms | ActiveRecord: 11.4ms | Allocations: 26689)
+
+
+Started GET "/listings/1" for ::1 at 2020-03-04 16:43:36 +1100
+Processing by ListingsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mListing Load (0.4ms)[0m  [1m[34mSELECT "listings".* FROM "listings" WHERE "listings"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/listings_controller.rb:51:in `find_listing'
+  Rendering listings/show.html.erb within layouts/application
+  Rendered listings/show.html.erb within layouts/application (Duration: 325.2ms | Allocations: 164446)
+Completed 500 Internal Server Error in 333ms (ActiveRecord: 0.4ms | Allocations: 166113)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `user_profile_path' for #<#<Class:0x00007fc5152d01e0>:0x00007fc5155011d0>
+Did you mean?  user_session_path):
+    4: <p><%= @listing.documentation %></p>
+    5: <p><%= @listing.description%></p>
+    6: 
+    7: <%= link_to 'SHOW PROFILE', user_profile_path  %>
+    8: 
+    9: <%= link_to 'Back', listings_path %>
+  
+app/views/listings/show.html.erb:7
+Started GET "/" for ::1 at 2020-03-04 16:44:00 +1100
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ListingsController#index as HTML
+  Rendering listings/index.html.erb within layouts/application
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/listings/index.html.erb:3
+  [1m[36mListing Load (0.6ms)[0m  [1m[34mSELECT "listings".* FROM "listings"[0m
+  ↳ app/views/listings/index.html.erb:7
+  Rendered listings/index.html.erb within layouts/application (Duration: 48.6ms | Allocations: 15923)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navbar.html.erb (Duration: 1.0ms | Allocations: 244)
+Completed 200 OK in 89ms (Views: 64.7ms | ActiveRecord: 12.0ms | Allocations: 26682)
+
+
+Started GET "/listings/1" for ::1 at 2020-03-04 16:44:01 +1100
+Processing by ListingsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mListing Load (0.9ms)[0m  [1m[34mSELECT "listings".* FROM "listings" WHERE "listings"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/listings_controller.rb:51:in `find_listing'
+  Rendering listings/show.html.erb within layouts/application
+  Rendered listings/show.html.erb within layouts/application (Duration: 1.8ms | Allocations: 241)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/_navbar.html.erb:1
+  Rendered layouts/_navbar.html.erb (Duration: 5.2ms | Allocations: 980)
+Completed 200 OK in 43ms (Views: 31.9ms | ActiveRecord: 1.4ms | Allocations: 6650)
+
+
+Started GET "/listings" for ::1 at 2020-03-04 16:44:03 +1100
+Processing by ListingsController#index as HTML
+  Rendering listings/index.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/listings/index.html.erb:3
+  [1m[36mListing Load (0.4ms)[0m  [1m[34mSELECT "listings".* FROM "listings"[0m
+  ↳ app/views/listings/index.html.erb:7
+  Rendered listings/index.html.erb within layouts/application (Duration: 7.4ms | Allocations: 2322)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navbar.html.erb (Duration: 0.2ms | Allocations: 48)
+Completed 200 OK in 30ms (Views: 27.4ms | ActiveRecord: 0.9ms | Allocations: 6968)
+
+
+Started GET "/listings/1" for ::1 at 2020-03-04 16:44:05 +1100
+Processing by ListingsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mListing Load (1.9ms)[0m  [1m[34mSELECT "listings".* FROM "listings" WHERE "listings"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/listings_controller.rb:51:in `find_listing'
+  Rendering listings/show.html.erb within layouts/application
+  Rendered listings/show.html.erb within layouts/application (Duration: 0.4ms | Allocations: 52)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/_navbar.html.erb:1
+  Rendered layouts/_navbar.html.erb (Duration: 3.0ms | Allocations: 979)
+Completed 200 OK in 21ms (Views: 12.3ms | ActiveRecord: 2.4ms | Allocations: 6212)
+
+
+Started GET "/listings" for ::1 at 2020-03-04 16:44:15 +1100
+Processing by ListingsController#index as HTML
+  Rendering listings/index.html.erb within layouts/application
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/listings/index.html.erb:3
+  [1m[36mListing Load (0.9ms)[0m  [1m[34mSELECT "listings".* FROM "listings"[0m
+  ↳ app/views/listings/index.html.erb:7
+  Rendered listings/index.html.erb within layouts/application (Duration: 9.4ms | Allocations: 2319)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navbar.html.erb (Duration: 0.1ms | Allocations: 48)
+Completed 200 OK in 19ms (Views: 16.0ms | ActiveRecord: 2.0ms | Allocations: 6954)
+
+
+Started GET "/listings/2" for ::1 at 2020-03-04 16:44:24 +1100
+Processing by ListingsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mListing Load (0.7ms)[0m  [1m[34mSELECT "listings".* FROM "listings" WHERE "listings"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/listings_controller.rb:51:in `find_listing'
+  Rendering listings/show.html.erb within layouts/application
+  Rendered listings/show.html.erb within layouts/application (Duration: 0.5ms | Allocations: 51)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/_navbar.html.erb:1
+  Rendered layouts/_navbar.html.erb (Duration: 2.7ms | Allocations: 976)
+Completed 200 OK in 25ms (Views: 19.1ms | ActiveRecord: 1.2ms | Allocations: 6173)
+
+
+Started GET "/listings" for ::1 at 2020-03-04 16:44:26 +1100
+Processing by ListingsController#index as HTML
+  Rendering listings/index.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/listings/index.html.erb:3
+  [1m[36mListing Load (0.5ms)[0m  [1m[34mSELECT "listings".* FROM "listings"[0m
+  ↳ app/views/listings/index.html.erb:7
+  Rendered listings/index.html.erb within layouts/application (Duration: 6.2ms | Allocations: 2308)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navbar.html.erb (Duration: 0.2ms | Allocations: 48)
+Completed 200 OK in 22ms (Views: 20.0ms | ActiveRecord: 0.7ms | Allocations: 6945)
+
+
+Started GET "/listings" for ::1 at 2020-03-04 16:47:58 +1100
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ListingsController#index as HTML
+  Rendering listings/index.html.erb within layouts/application
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/listings/index.html.erb:3
+  [1m[36mListing Load (0.6ms)[0m  [1m[34mSELECT "listings".* FROM "listings"[0m
+  ↳ app/views/listings/index.html.erb:7
+  Rendered listings/index.html.erb within layouts/application (Duration: 42.5ms | Allocations: 15923)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navbar.html.erb (Duration: 1.6ms | Allocations: 244)
+Completed 200 OK in 93ms (Views: 69.8ms | ActiveRecord: 11.3ms | Allocations: 26689)
+
+
+Started GET "/listings/1/edit" for ::1 at 2020-03-04 16:48:00 +1100
+Processing by ListingsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 20ms (ActiveRecord: 0.3ms | Allocations: 3939)
+
+
+  
+NoMethodError (undefined method `user_id' for nil:NilClass):
+  
+app/controllers/listings_controller.rb:55:in `authorise_user!'
+Started GET "/" for ::1 at 2020-03-04 16:48:10 +1100
+Processing by ListingsController#index as HTML
+  Rendering listings/index.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/listings/index.html.erb:3
+  [1m[36mListing Load (0.3ms)[0m  [1m[34mSELECT "listings".* FROM "listings"[0m
+  ↳ app/views/listings/index.html.erb:7
+  Rendered listings/index.html.erb within layouts/application (Duration: 5.0ms | Allocations: 2355)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navbar.html.erb (Duration: 0.1ms | Allocations: 48)
+Completed 200 OK in 40ms (Views: 37.9ms | ActiveRecord: 0.6ms | Allocations: 7046)
+
+
+Started GET "/listings/1" for ::1 at 2020-03-04 16:48:12 +1100
+Processing by ListingsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mListing Load (0.5ms)[0m  [1m[34mSELECT "listings".* FROM "listings" WHERE "listings"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/listings_controller.rb:51:in `find_listing'
+  Rendering listings/show.html.erb within layouts/application
+  Rendered listings/show.html.erb within layouts/application (Duration: 1.9ms | Allocations: 241)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/_navbar.html.erb:1
+  Rendered layouts/_navbar.html.erb (Duration: 5.4ms | Allocations: 980)
+Completed 200 OK in 28ms (Views: 21.2ms | ActiveRecord: 2.0ms | Allocations: 6651)
+
+
+Started GET "/listings" for ::1 at 2020-03-04 16:48:14 +1100
+Processing by ListingsController#index as HTML
+  Rendering listings/index.html.erb within layouts/application
+  [1m[36mUser Load (2.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/listings/index.html.erb:3
+  [1m[36mListing Load (3.4ms)[0m  [1m[34mSELECT "listings".* FROM "listings"[0m
+  ↳ app/views/listings/index.html.erb:7
+  Rendered listings/index.html.erb within layouts/application (Duration: 12.0ms | Allocations: 2322)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navbar.html.erb (Duration: 0.2ms | Allocations: 48)
+Completed 200 OK in 31ms (Views: 23.4ms | ActiveRecord: 5.4ms | Allocations: 6970)
+
+
+Started GET "/listings/1/edit" for ::1 at 2020-03-04 16:48:14 +1100
+Processing by ListingsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.9ms | Allocations: 2708)
+
+
+  
+NoMethodError (undefined method `user_id' for nil:NilClass):
+  
+app/controllers/listings_controller.rb:55:in `authorise_user!'
+Started GET "/listings" for ::1 at 2020-03-04 16:48:21 +1100
+Processing by ListingsController#index as HTML
+  Rendering listings/index.html.erb within layouts/application
+  [1m[36mUser Load (1.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/listings/index.html.erb:3
+  [1m[36mListing Load (0.7ms)[0m  [1m[34mSELECT "listings".* FROM "listings"[0m
+  ↳ app/views/listings/index.html.erb:7
+  Rendered listings/index.html.erb within layouts/application (Duration: 8.5ms | Allocations: 2307)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navbar.html.erb (Duration: 0.3ms | Allocations: 48)
+Completed 200 OK in 22ms (Views: 17.9ms | ActiveRecord: 2.6ms | Allocations: 6940)
+
+
+Started GET "/listings/6/edit" for ::1 at 2020-03-04 16:48:25 +1100
+Processing by ListingsController#edit as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.9ms | Allocations: 2709)
+
+
+  
+NoMethodError (undefined method `user_id' for nil:NilClass):
+  
+app/controllers/listings_controller.rb:55:in `authorise_user!'
+Started GET "/listings" for ::1 at 2020-03-04 16:50:21 +1100
+Processing by ListingsController#index as HTML
+  Rendering listings/index.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/listings/index.html.erb:3
+  [1m[36mListing Load (2.6ms)[0m  [1m[34mSELECT "listings".* FROM "listings"[0m
+  ↳ app/views/listings/index.html.erb:7
+  Rendered listings/index.html.erb within layouts/application (Duration: 8.1ms | Allocations: 2307)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navbar.html.erb (Duration: 0.1ms | Allocations: 48)
+Completed 200 OK in 37ms (Views: 32.7ms | ActiveRecord: 2.9ms | Allocations: 6945)
+
+
+Started GET "/listings/1" for ::1 at 2020-03-04 16:50:22 +1100
+Processing by ListingsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mListing Load (0.7ms)[0m  [1m[34mSELECT "listings".* FROM "listings" WHERE "listings"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/listings_controller.rb:51:in `find_listing'
+  Rendering listings/show.html.erb within layouts/application
+  Rendered listings/show.html.erb within layouts/application (Duration: 0.2ms | Allocations: 51)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/_navbar.html.erb:1
+  Rendered layouts/_navbar.html.erb (Duration: 2.9ms | Allocations: 976)
+Completed 200 OK in 15ms (Views: 11.3ms | ActiveRecord: 1.0ms | Allocations: 6174)
+
+
+Started GET "/listings/new" for ::1 at 2020-03-04 16:50:24 +1100
+Processing by ListingsController#new as HTML
+  [1m[36mUser Load (4.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering listings/new.html.erb within layouts/application
+  Rendered listings/_form.html.erb (Duration: 33.4ms | Allocations: 9290)
+  Rendered listings/new.html.erb within layouts/application (Duration: 36.0ms | Allocations: 9646)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navbar.html.erb (Duration: 0.2ms | Allocations: 61)
+Completed 200 OK in 57ms (Views: 46.4ms | ActiveRecord: 4.7ms | Allocations: 15803)
+
+
+Started POST "/listings" for ::1 at 2020-03-04 16:50:31 +1100
+Processing by ListingsController#create as HTML
+  Parameters: {"authenticity_token"=>"QDN0UcToz9WZ+bgMZLLNmQ87OVgP4L/NhTk7rpg44fBKYuSF0RR1+8+jjmYKKTgkQ3k2NVF7sUbYnjGTVQguSg==", "listing"=>{"name"=>"test", "breed"=>"test", "price"=>"101010", "documentation"=>"test", "description"=>"test"}, "commit"=>"Create Listing"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/listings_controller.rb:20:in `create'
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/listings_controller.rb:20:in `create'
+  [1m[36mListing Create (1.1ms)[0m  [1m[32mINSERT INTO "listings" ("name", "breed", "price", "documentation", "description", "created_at", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["name", "test"], ["breed", "test"], ["price", 101010], ["documentation", "test"], ["description", "test"], ["created_at", "2020-03-04 05:50:31.960768"], ["updated_at", "2020-03-04 05:50:31.960768"], ["user_id", 1]]
+  ↳ app/controllers/listings_controller.rb:20:in `create'
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/listings_controller.rb:20:in `create'
+Redirected to http://localhost:3000/listings/9
+Completed 302 Found in 23ms (ActiveRecord: 3.3ms | Allocations: 9088)
+
+
+Started GET "/listings/9" for ::1 at 2020-03-04 16:50:31 +1100
+Processing by ListingsController#show as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mListing Load (0.3ms)[0m  [1m[34mSELECT "listings".* FROM "listings" WHERE "listings"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/listings_controller.rb:51:in `find_listing'
+  Rendering listings/show.html.erb within layouts/application
+  Rendered listings/show.html.erb within layouts/application (Duration: 0.2ms | Allocations: 51)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/_navbar.html.erb:1
+  Rendered layouts/_navbar.html.erb (Duration: 1.6ms | Allocations: 976)
+Completed 200 OK in 10ms (Views: 8.1ms | ActiveRecord: 0.5ms | Allocations: 6174)
+
+
+Started GET "/listings" for ::1 at 2020-03-04 16:50:33 +1100
+Processing by ListingsController#index as HTML
+  Rendering listings/index.html.erb within layouts/application
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/listings/index.html.erb:3
+  [1m[36mListing Load (3.1ms)[0m  [1m[34mSELECT "listings".* FROM "listings"[0m
+  ↳ app/views/listings/index.html.erb:7
+  Rendered listings/index.html.erb within layouts/application (Duration: 12.8ms | Allocations: 2441)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navbar.html.erb (Duration: 0.2ms | Allocations: 48)
+Completed 200 OK in 34ms (Views: 29.0ms | ActiveRecord: 3.9ms | Allocations: 7081)
+
+
+Started GET "/listings/9/edit" for ::1 at 2020-03-04 16:50:35 +1100
+Processing by ListingsController#edit as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.8ms | Allocations: 2716)
+
+
+  
+NoMethodError (undefined method `user_id' for nil:NilClass):
+  
+app/controllers/listings_controller.rb:55:in `authorise_user!'
+Started GET "/listings" for ::1 at 2020-03-04 16:50:44 +1100
+Processing by ListingsController#index as HTML
+  Rendering listings/index.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/listings/index.html.erb:3
+  [1m[36mListing Load (0.6ms)[0m  [1m[34mSELECT "listings".* FROM "listings"[0m
+  ↳ app/views/listings/index.html.erb:7
+  Rendered listings/index.html.erb within layouts/application (Duration: 8.4ms | Allocations: 2437)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navbar.html.erb (Duration: 0.2ms | Allocations: 48)
+Completed 200 OK in 23ms (Views: 20.9ms | ActiveRecord: 0.9ms | Allocations: 7082)
+
+
+Started GET "/listings/9" for ::1 at 2020-03-04 16:50:46 +1100
+Processing by ListingsController#show as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mListing Load (1.2ms)[0m  [1m[34mSELECT "listings".* FROM "listings" WHERE "listings"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/listings_controller.rb:51:in `find_listing'
+  Rendering listings/show.html.erb within layouts/application
+  Rendered listings/show.html.erb within layouts/application (Duration: 0.9ms | Allocations: 51)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/_navbar.html.erb:1
+  Rendered layouts/_navbar.html.erb (Duration: 3.1ms | Allocations: 976)
+Completed 200 OK in 27ms (Views: 20.8ms | ActiveRecord: 1.7ms | Allocations: 6182)
+
+
+Started GET "/listings" for ::1 at 2020-03-04 16:50:47 +1100
+Processing by ListingsController#index as HTML
+  Rendering listings/index.html.erb within layouts/application
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/listings/index.html.erb:3
+  [1m[36mListing Load (0.7ms)[0m  [1m[34mSELECT "listings".* FROM "listings"[0m
+  ↳ app/views/listings/index.html.erb:7
+  Rendered listings/index.html.erb within layouts/application (Duration: 9.1ms | Allocations: 2438)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navbar.html.erb (Duration: 0.2ms | Allocations: 48)
+Completed 200 OK in 29ms (Views: 26.1ms | ActiveRecord: 1.6ms | Allocations: 7078)
+
+
+Started GET "/" for ::1 at 2020-03-04 16:54:51 +1100
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ListingsController#index as HTML
+  Rendering listings/index.html.erb within layouts/application
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/listings/index.html.erb:3
+  [1m[36mListing Load (0.7ms)[0m  [1m[34mSELECT "listings".* FROM "listings"[0m
+  ↳ app/views/listings/index.html.erb:7
+  Rendered listings/index.html.erb within layouts/application (Duration: 52.0ms | Allocations: 16054)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navbar.html.erb (Duration: 1.7ms | Allocations: 244)
+Completed 200 OK in 107ms (Views: 84.2ms | ActiveRecord: 12.5ms | Allocations: 26825)
+
+
+Started GET "/listings/1" for ::1 at 2020-03-04 16:54:54 +1100
+Processing by ListingsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mListing Load (0.3ms)[0m  [1m[34mSELECT "listings".* FROM "listings" WHERE "listings"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/listings_controller.rb:51:in `find_listing'
+  Rendering listings/show.html.erb within layouts/application
+  Rendered listings/show.html.erb within layouts/application (Duration: 0.6ms | Allocations: 241)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/_navbar.html.erb:1
+  Rendered layouts/_navbar.html.erb (Duration: 3.2ms | Allocations: 980)
+Completed 200 OK in 21ms (Views: 16.5ms | ActiveRecord: 0.9ms | Allocations: 6665)
+
+
+Started GET "/listings" for ::1 at 2020-03-04 16:54:55 +1100
+Processing by ListingsController#index as HTML
+  Rendering listings/index.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/listings/index.html.erb:3
+  [1m[36mListing Load (0.6ms)[0m  [1m[34mSELECT "listings".* FROM "listings"[0m
+  ↳ app/views/listings/index.html.erb:7
+  Rendered listings/index.html.erb within layouts/application (Duration: 9.6ms | Allocations: 2452)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navbar.html.erb (Duration: 0.4ms | Allocations: 48)
+Completed 200 OK in 29ms (Views: 24.7ms | ActiveRecord: 1.0ms | Allocations: 7114)
+
+
+Started GET "/listings/1/edit" for ::1 at 2020-03-04 16:54:56 +1100
+Processing by ListingsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 11ms (ActiveRecord: 0.5ms | Allocations: 3943)
+
+
+  
+NoMethodError (undefined method `user_id' for nil:NilClass):
+  
+app/controllers/listings_controller.rb:55:in `authorise_user!'
+Started GET "/listings" for ::1 at 2020-03-04 16:55:04 +1100
+Processing by ListingsController#index as HTML
+  Rendering listings/index.html.erb within layouts/application
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/listings/index.html.erb:3
+  [1m[36mListing Load (2.7ms)[0m  [1m[34mSELECT "listings".* FROM "listings"[0m
+  ↳ app/views/listings/index.html.erb:7
+  Rendered listings/index.html.erb within layouts/application (Duration: 10.6ms | Allocations: 2482)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navbar.html.erb (Duration: 0.7ms | Allocations: 48)
+Completed 200 OK in 30ms (Views: 24.9ms | ActiveRecord: 3.6ms | Allocations: 7173)
+
+
+Started GET "/listings/1/edit" for ::1 at 2020-03-04 16:57:20 +1100
+Processing by ListingsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 1.5ms | Allocations: 2721)
+
+
+  
+NoMethodError (undefined method `user_id' for nil:NilClass):
+  
+app/controllers/listings_controller.rb:55:in `authorise_user!'
+Started GET "/" for ::1 at 2020-03-04 16:59:59 +1100
+Processing by ListingsController#index as HTML
+  Rendering listings/index.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/listings/index.html.erb:3
+  [1m[36mListing Load (0.3ms)[0m  [1m[34mSELECT "listings".* FROM "listings"[0m
+  ↳ app/views/listings/index.html.erb:7
+  Rendered listings/index.html.erb within layouts/application (Duration: 28.0ms | Allocations: 14027)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navbar.html.erb (Duration: 0.2ms | Allocations: 51)
+Completed 200 OK in 47ms (Views: 33.3ms | ActiveRecord: 10.8ms | Allocations: 19378)
+
+
+Started GET "/listings/1" for ::1 at 2020-03-04 17:00:01 +1100
+Processing by ListingsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mListing Load (0.7ms)[0m  [1m[34mSELECT "listings".* FROM "listings" WHERE "listings"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/listings_controller.rb:51:in `find_listing'
+  Rendering listings/show.html.erb within layouts/application
+  Rendered listings/show.html.erb within layouts/application (Duration: 0.3ms | Allocations: 54)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (3.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/_navbar.html.erb:1
+  Rendered layouts/_navbar.html.erb (Duration: 7.3ms | Allocations: 979)
+Completed 200 OK in 21ms (Views: 12.9ms | ActiveRecord: 4.5ms | Allocations: 6304)
+
+
+Started GET "/listings" for ::1 at 2020-03-04 17:00:02 +1100
+Processing by ListingsController#index as HTML
+  Rendering listings/index.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/listings/index.html.erb:3
+  [1m[36mListing Load (0.8ms)[0m  [1m[34mSELECT "listings".* FROM "listings"[0m
+  ↳ app/views/listings/index.html.erb:7
+  Rendered listings/index.html.erb within layouts/application (Duration: 7.7ms | Allocations: 2438)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navbar.html.erb (Duration: 0.2ms | Allocations: 48)
+Completed 200 OK in 22ms (Views: 19.7ms | ActiveRecord: 1.1ms | Allocations: 7079)
+
+
+Started GET "/listings/1/edit" for ::1 at 2020-03-04 17:00:04 +1100
+Processing by ListingsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 227ms (ActiveRecord: 0.2ms | Allocations: 111926)
+
+
+  
+NameError (undefined local variable or method `listing' for #<ListingsController:0x00007fb1b8326b28>
+Did you mean?  listing_url):
+  
+app/controllers/listings_controller.rb:55:in `authorise_user!'
+Started GET "/listings" for ::1 at 2020-03-04 17:00:08 +1100
+Processing by ListingsController#index as HTML
+  Rendering listings/index.html.erb within layouts/application
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/listings/index.html.erb:3
+  [1m[36mListing Load (1.5ms)[0m  [1m[34mSELECT "listings".* FROM "listings"[0m
+  ↳ app/views/listings/index.html.erb:7
+  Rendered listings/index.html.erb within layouts/application (Duration: 9.6ms | Allocations: 2437)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navbar.html.erb (Duration: 0.2ms | Allocations: 48)
+Completed 200 OK in 25ms (Views: 20.9ms | ActiveRecord: 2.3ms | Allocations: 7088)
+
+
+Started GET "/listings" for ::1 at 2020-03-04 17:00:38 +1100
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ListingsController#index as HTML
+  Rendering listings/index.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/listings/index.html.erb:3
+  [1m[36mListing Load (0.8ms)[0m  [1m[34mSELECT "listings".* FROM "listings"[0m
+  ↳ app/views/listings/index.html.erb:7
+  Rendered listings/index.html.erb within layouts/application (Duration: 48.1ms | Allocations: 16053)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navbar.html.erb (Duration: 0.7ms | Allocations: 244)
+Completed 200 OK in 88ms (Views: 64.5ms | ActiveRecord: 12.2ms | Allocations: 26825)
+
+
+Started GET "/listings/1" for ::1 at 2020-03-04 17:00:40 +1100
+Processing by ListingsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mListing Load (0.3ms)[0m  [1m[34mSELECT "listings".* FROM "listings" WHERE "listings"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/listings_controller.rb:51:in `find_listing'
+  Rendering listings/show.html.erb within layouts/application
+  Rendered listings/show.html.erb within layouts/application (Duration: 1.9ms | Allocations: 241)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/_navbar.html.erb:1
+  Rendered layouts/_navbar.html.erb (Duration: 3.5ms | Allocations: 980)
+Completed 200 OK in 37ms (Views: 31.1ms | ActiveRecord: 1.5ms | Allocations: 6663)
+
+
+Started GET "/listings" for ::1 at 2020-03-04 17:00:42 +1100
+Processing by ListingsController#index as HTML
+  Rendering listings/index.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/listings/index.html.erb:3
+  [1m[36mListing Load (1.2ms)[0m  [1m[34mSELECT "listings".* FROM "listings"[0m
+  ↳ app/views/listings/index.html.erb:7
+  Rendered listings/index.html.erb within layouts/application (Duration: 8.8ms | Allocations: 2452)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navbar.html.erb (Duration: 0.2ms | Allocations: 48)
+Completed 200 OK in 29ms (Views: 25.6ms | ActiveRecord: 1.6ms | Allocations: 7111)
+
+
+Started GET "/listings/1/edit" for ::1 at 2020-03-04 17:00:43 +1100
+Processing by ListingsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (1.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 18ms (ActiveRecord: 1.9ms | Allocations: 3957)
+
+
+  
+NoMethodError (undefined method `user_id' for nil:NilClass):
+  
+app/controllers/listings_controller.rb:55:in `authorise_user!'
+Started GET "/" for ::1 at 2020-03-04 17:02:59 +1100
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ListingsController#index as HTML
+  Rendering listings/index.html.erb within layouts/application
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/listings/index.html.erb:3
+  [1m[36mListing Load (0.6ms)[0m  [1m[34mSELECT "listings".* FROM "listings"[0m
+  ↳ app/views/listings/index.html.erb:7
+  Rendered listings/index.html.erb within layouts/application (Duration: 48.0ms | Allocations: 16053)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navbar.html.erb (Duration: 1.2ms | Allocations: 244)
+Completed 200 OK in 87ms (Views: 64.2ms | ActiveRecord: 10.9ms | Allocations: 26831)
+
+
+Started GET "/listings/1/edit" for ::1 at 2020-03-04 17:03:00 +1100
+Processing by ListingsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (1.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 28ms (ActiveRecord: 1.9ms | Allocations: 3957)
+
+
+  
+NoMethodError (undefined method `user_id' for nil:NilClass):
+  
+app/controllers/listings_controller.rb:51:in `authorise_user!'
+Started GET "/" for ::1 at 2020-03-04 17:03:03 +1100
+Processing by ListingsController#index as HTML
+  Rendering listings/index.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/listings/index.html.erb:3
+  [1m[36mListing Load (1.2ms)[0m  [1m[34mSELECT "listings".* FROM "listings"[0m
+  ↳ app/views/listings/index.html.erb:7
+  Rendered listings/index.html.erb within layouts/application (Duration: 6.2ms | Allocations: 2485)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navbar.html.erb (Duration: 0.3ms | Allocations: 48)
+Completed 200 OK in 25ms (Views: 22.3ms | ActiveRecord: 1.7ms | Allocations: 7194)
+
+
+Started GET "/listings/1" for ::1 at 2020-03-04 17:03:04 +1100
+Processing by ListingsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mListing Load (1.3ms)[0m  [1m[34mSELECT "listings".* FROM "listings" WHERE "listings"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/listings_controller.rb:55:in `find_listing'
+  Rendering listings/show.html.erb within layouts/application
+  Rendered listings/show.html.erb within layouts/application (Duration: 0.9ms | Allocations: 241)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (4.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/_navbar.html.erb:1
+  Rendered layouts/_navbar.html.erb (Duration: 6.6ms | Allocations: 980)
+Completed 200 OK in 27ms (Views: 14.1ms | ActiveRecord: 5.9ms | Allocations: 6663)
+
+
+  [1m[35m (1.7ms)[0m  [1m[34mSELECT pg_try_advisory_lock(8559049176625533915)[0m
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to AddUseridToListing (20200304061339)
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (5.0ms)[0m  [1m[35mALTER TABLE "listings" ADD "user_id" integer[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(8559049176625533915)[0m
+Started GET "/" for ::1 at 2020-03-04 17:16:29 +1100
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ListingsController#index as HTML
+  Rendering listings/index.html.erb within layouts/application
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/listings/index.html.erb:3
+  [1m[36mListing Load (0.6ms)[0m  [1m[34mSELECT "listings".* FROM "listings"[0m
+  ↳ app/views/listings/index.html.erb:7
+  Rendered listings/index.html.erb within layouts/application (Duration: 43.5ms | Allocations: 16053)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navbar.html.erb (Duration: 1.4ms | Allocations: 244)
+Completed 200 OK in 91ms (Views: 69.3ms | ActiveRecord: 10.7ms | Allocations: 26830)
+
+
+Started GET "/" for ::1 at 2020-03-04 17:16:30 +1100
+Processing by ListingsController#index as HTML
+  Rendering listings/index.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/listings/index.html.erb:3
+  [1m[36mListing Load (0.4ms)[0m  [1m[34mSELECT "listings".* FROM "listings"[0m
+  ↳ app/views/listings/index.html.erb:7
+  Rendered listings/index.html.erb within layouts/application (Duration: 8.9ms | Allocations: 2452)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navbar.html.erb (Duration: 0.1ms | Allocations: 48)
+Completed 200 OK in 28ms (Views: 24.7ms | ActiveRecord: 0.7ms | Allocations: 7113)
+
+
+Started GET "/listings/1" for ::1 at 2020-03-04 17:16:31 +1100
+Processing by ListingsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mListing Load (1.0ms)[0m  [1m[34mSELECT "listings".* FROM "listings" WHERE "listings"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/listings_controller.rb:51:in `find_listing'
+  Rendering listings/show.html.erb within layouts/application
+  Rendered listings/show.html.erb within layouts/application (Duration: 1.0ms | Allocations: 241)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/_navbar.html.erb:1
+  Rendered layouts/_navbar.html.erb (Duration: 3.9ms | Allocations: 980)
+Completed 200 OK in 31ms (Views: 25.0ms | ActiveRecord: 1.5ms | Allocations: 6661)
+
+
+Started GET "/listings" for ::1 at 2020-03-04 17:16:32 +1100
+Processing by ListingsController#index as HTML
+  Rendering listings/index.html.erb within layouts/application
+  [1m[36mUser Load (2.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/listings/index.html.erb:3
+  [1m[36mListing Load (0.3ms)[0m  [1m[34mSELECT "listings".* FROM "listings"[0m
+  ↳ app/views/listings/index.html.erb:7
+  Rendered listings/index.html.erb within layouts/application (Duration: 9.4ms | Allocations: 2452)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navbar.html.erb (Duration: 0.4ms | Allocations: 48)
+Completed 200 OK in 28ms (Views: 23.2ms | ActiveRecord: 3.0ms | Allocations: 7111)
+
+
+Started GET "/listings/1/edit" for ::1 at 2020-03-04 17:16:33 +1100
+Processing by ListingsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 16ms (ActiveRecord: 0.5ms | Allocations: 3953)
+
+
+  
+NoMethodError (undefined method `user_id' for nil:NilClass):
+  
+app/controllers/listings_controller.rb:55:in `authorise_user!'
+Started GET "/listings" for ::1 at 2020-03-04 17:16:37 +1100
+Processing by ListingsController#index as HTML
+  Rendering listings/index.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/listings/index.html.erb:3
+  [1m[36mListing Load (0.4ms)[0m  [1m[34mSELECT "listings".* FROM "listings"[0m
+  ↳ app/views/listings/index.html.erb:7
+  Rendered listings/index.html.erb within layouts/application (Duration: 6.6ms | Allocations: 2471)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navbar.html.erb (Duration: 0.2ms | Allocations: 48)
+Completed 200 OK in 21ms (Views: 19.1ms | ActiveRecord: 0.9ms | Allocations: 7162)
+
+
+Started GET "/listings/1" for ::1 at 2020-03-04 17:23:23 +1100
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ListingsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mListing Load (0.5ms)[0m  [1m[34mSELECT "listings".* FROM "listings" WHERE "listings"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/listings_controller.rb:51:in `find_listing'
+  Rendering listings/show.html.erb within layouts/application
+  Rendered listings/show.html.erb within layouts/application (Duration: 3.5ms | Allocations: 535)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/_navbar.html.erb:1
+  Rendered layouts/_navbar.html.erb (Duration: 20.8ms | Allocations: 6903)
+Completed 200 OK in 87ms (Views: 49.8ms | ActiveRecord: 10.9ms | Allocations: 25906)
+
+
+Started GET "/listings" for ::1 at 2020-03-04 17:23:25 +1100
+Processing by ListingsController#index as HTML
+  Rendering listings/index.html.erb within layouts/application
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/listings/index.html.erb:3
+  [1m[36mListing Load (0.5ms)[0m  [1m[34mSELECT "listings".* FROM "listings"[0m
+  ↳ app/views/listings/index.html.erb:7
+  Rendered listings/index.html.erb within layouts/application (Duration: 17.7ms | Allocations: 2783)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navbar.html.erb (Duration: 0.1ms | Allocations: 49)
+Completed 200 OK in 46ms (Views: 40.9ms | ActiveRecord: 1.1ms | Allocations: 7586)
+
+
+Started GET "/listings/1/edit" for ::1 at 2020-03-04 17:23:26 +1100
+Processing by ListingsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 31ms (ActiveRecord: 1.0ms | Allocations: 8857)
+
+
+  
+NoMethodError (undefined method `user_id' for nil:NilClass):
+  
+app/controllers/listings_controller.rb:55:in `authorise_user!'
+Started GET "/listings" for ::1 at 2020-03-04 17:23:28 +1100
+Processing by ListingsController#index as HTML
+  Rendering listings/index.html.erb within layouts/application
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/listings/index.html.erb:3
+  [1m[36mListing Load (0.3ms)[0m  [1m[34mSELECT "listings".* FROM "listings"[0m
+  ↳ app/views/listings/index.html.erb:7
+  Rendered listings/index.html.erb within layouts/application (Duration: 5.2ms | Allocations: 2482)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navbar.html.erb (Duration: 0.1ms | Allocations: 48)
+Completed 200 OK in 22ms (Views: 19.9ms | ActiveRecord: 1.1ms | Allocations: 7181)
+
+
+Started GET "/listings/new" for ::1 at 2020-03-04 17:23:29 +1100
+Processing by ListingsController#new as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering listings/new.html.erb within layouts/application
+  Rendered listings/_form.html.erb (Duration: 313.8ms | Allocations: 168470)
+  Rendered listings/new.html.erb within layouts/application (Duration: 321.0ms | Allocations: 168807)
+Completed 500 Internal Server Error in 331ms (ActiveRecord: 1.0ms | Allocations: 171264)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `f' for #<#<Class:0x00007fb0cdceefe8>:0x00007fb0d3841da0>):
+    41:   </div>
+    42: 
+    43:   <div class="actions">
+    44:     <%= f.hidden_field :post_id, :value => current_user.id %>
+    45:     <%= form.submit %>
+    46:   </div>
+    47: <% end %>
+  
+app/views/listings/_form.html.erb:44
+app/views/listings/_form.html.erb:1
+app/views/listings/new.html.erb:3
+Started GET "/listings/new" for ::1 at 2020-03-04 17:24:04 +1100
+Processing by ListingsController#new as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering listings/new.html.erb within layouts/application
+  Rendered listings/_form.html.erb (Duration: 11.8ms | Allocations: 2093)
+  Rendered listings/new.html.erb within layouts/application (Duration: 13.1ms | Allocations: 2446)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navbar.html.erb (Duration: 0.7ms | Allocations: 246)
+Completed 200 OK in 35ms (Views: 30.0ms | ActiveRecord: 0.6ms | Allocations: 9946)
+
+
+Started POST "/listings" for ::1 at 2020-03-04 17:30:47 +1100
+Processing by ListingsController#create as HTML
+  Parameters: {"authenticity_token"=>"GJw18hAOKx2YOduzq0YO/ivIa/qNlsvoKdGw4oYUereQu29RglyG645fhlSHNU/SV9FVuLEHJ6p8Zh/JzgjYYw==", "listing"=>{"name"=>"asdjkl", "breed"=>"asdjkl", "price"=>"asdjkl", "documentation"=>"asdjkl", "description"=>"asdjkl"}, "commit"=>"Create Listing"}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/listings_controller.rb:20:in `create'
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/listings_controller.rb:20:in `create'
+  [1m[36mListing Create (2.2ms)[0m  [1m[32mINSERT INTO "listings" ("name", "breed", "price", "documentation", "description", "created_at", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["name", "asdjkl"], ["breed", "asdjkl"], ["price", 0], ["documentation", "asdjkl"], ["description", "asdjkl"], ["created_at", "2020-03-04 06:30:47.970732"], ["updated_at", "2020-03-04 06:30:47.970732"], ["user_id", 1]]
+  ↳ app/controllers/listings_controller.rb:20:in `create'
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/listings_controller.rb:20:in `create'
+Redirected to http://localhost:3000/listings/10
+Completed 302 Found in 24ms (ActiveRecord: 4.3ms | Allocations: 9191)
+
+
+Started GET "/listings/10" for ::1 at 2020-03-04 17:30:47 +1100
+Processing by ListingsController#show as HTML
+  Parameters: {"id"=>"10"}
+  [1m[36mListing Load (0.4ms)[0m  [1m[34mSELECT "listings".* FROM "listings" WHERE "listings"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/controllers/listings_controller.rb:51:in `find_listing'
+  Rendering listings/show.html.erb within layouts/application
+  Rendered listings/show.html.erb within layouts/application (Duration: 1.2ms | Allocations: 233)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/_navbar.html.erb:1
+  Rendered layouts/_navbar.html.erb (Duration: 2.6ms | Allocations: 1164)
+Completed 200 OK in 29ms (Views: 26.3ms | ActiveRecord: 0.8ms | Allocations: 7800)
+
+
+Started GET "/listings" for ::1 at 2020-03-04 17:30:49 +1100
+Processing by ListingsController#index as HTML
+  Rendering listings/index.html.erb within layouts/application
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/listings/index.html.erb:3
+  [1m[36mListing Load (1.4ms)[0m  [1m[34mSELECT "listings".* FROM "listings"[0m
+  ↳ app/views/listings/index.html.erb:7
+  Rendered listings/index.html.erb within layouts/application (Duration: 11.5ms | Allocations: 2884)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navbar.html.erb (Duration: 0.2ms | Allocations: 49)
+Completed 200 OK in 29ms (Views: 24.6ms | ActiveRecord: 2.1ms | Allocations: 7679)
+
+
+Started GET "/listings/10/edit" for ::1 at 2020-03-04 17:30:50 +1100
+Processing by ListingsController#edit as HTML
+  Parameters: {"id"=>"10"}
+  [1m[36mUser Load (2.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 2.8ms | Allocations: 2714)
+
+
+  
+NoMethodError (undefined method `user_id' for nil:NilClass):
+  
+app/controllers/listings_controller.rb:55:in `authorise_user!'
+Started GET "/listings" for ::1 at 2020-03-04 17:30:53 +1100
+Processing by ListingsController#index as HTML
+  Rendering listings/index.html.erb within layouts/application
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/listings/index.html.erb:3
+  [1m[36mListing Load (0.4ms)[0m  [1m[34mSELECT "listings".* FROM "listings"[0m
+  ↳ app/views/listings/index.html.erb:7
+  Rendered listings/index.html.erb within layouts/application (Duration: 5.3ms | Allocations: 2568)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navbar.html.erb (Duration: 0.2ms | Allocations: 48)
+Completed 200 OK in 19ms (Views: 16.8ms | ActiveRecord: 1.1ms | Allocations: 7212)
+
+
+Started GET "/listings/10" for ::1 at 2020-03-04 17:30:54 +1100
+Processing by ListingsController#show as HTML
+  Parameters: {"id"=>"10"}
+  [1m[36mListing Load (0.7ms)[0m  [1m[34mSELECT "listings".* FROM "listings" WHERE "listings"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/controllers/listings_controller.rb:51:in `find_listing'
+  Rendering listings/show.html.erb within layouts/application
+  Rendered listings/show.html.erb within layouts/application (Duration: 0.3ms | Allocations: 53)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/_navbar.html.erb:1
+  Rendered layouts/_navbar.html.erb (Duration: 2.7ms | Allocations: 976)
+Completed 200 OK in 20ms (Views: 16.3ms | ActiveRecord: 1.2ms | Allocations: 6190)
+
+
+Started GET "/listings" for ::1 at 2020-03-04 17:34:27 +1100
+Processing by ListingsController#index as HTML
+  Rendering listings/index.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/listings/index.html.erb:3
+  [1m[36mListing Load (0.3ms)[0m  [1m[34mSELECT "listings".* FROM "listings"[0m
+  ↳ app/views/listings/index.html.erb:7
+  Rendered listings/index.html.erb within layouts/application (Duration: 30.6ms | Allocations: 14295)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navbar.html.erb (Duration: 0.2ms | Allocations: 51)
+Completed 200 OK in 50ms (Views: 31.1ms | ActiveRecord: 16.0ms | Allocations: 19646)
+
+
+Started GET "/listings/new" for ::1 at 2020-03-04 17:34:28 +1100
+Processing by ListingsController#new as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering listings/new.html.erb within layouts/application
+  Rendered listings/_form.html.erb (Duration: 5.2ms | Allocations: 2104)
+  Rendered listings/new.html.erb within layouts/application (Duration: 6.8ms | Allocations: 2462)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navbar.html.erb (Duration: 0.3ms | Allocations: 61)
+Completed 200 OK in 29ms (Views: 19.5ms | ActiveRecord: 0.4ms | Allocations: 9708)
+
+
+Started POST "/listings" for ::1 at 2020-03-04 17:34:34 +1100
+Processing by ListingsController#create as HTML
+  Parameters: {"authenticity_token"=>"9i77R77V+mKiM3wQp+WxDzNsRcukJRgwS9zwiJILUrn8f2uTqylATPRpSnrJfkSyfy5Kpvq+FrsWe/q1XzudAw==", "listing"=>{"name"=>"asdjklasdjkl", "breed"=>"asdjklasdjkl", "price"=>"asdasdasd", "documentation"=>"asdadad", "description"=>"asdasdaa"}, "commit"=>"Create Listing"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/listings_controller.rb:20:in `create'
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/listings_controller.rb:20:in `create'
+  [1m[36mListing Create (0.7ms)[0m  [1m[32mINSERT INTO "listings" ("name", "breed", "price", "documentation", "description", "created_at", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["name", "asdjklasdjkl"], ["breed", "asdjklasdjkl"], ["price", 0], ["documentation", "asdadad"], ["description", "asdasdaa"], ["created_at", "2020-03-04 06:34:34.634980"], ["updated_at", "2020-03-04 06:34:34.634980"], ["user_id", 1]]
+  ↳ app/controllers/listings_controller.rb:20:in `create'
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/listings_controller.rb:20:in `create'
+Redirected to http://localhost:3000/listings/11
+Completed 302 Found in 18ms (ActiveRecord: 2.4ms | Allocations: 6450)
+
+
+Started GET "/listings/11" for ::1 at 2020-03-04 17:34:34 +1100
+Processing by ListingsController#show as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mListing Load (0.3ms)[0m  [1m[34mSELECT "listings".* FROM "listings" WHERE "listings"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/listings_controller.rb:52:in `find_listing'
+  Rendering listings/show.html.erb within layouts/application
+  Rendered listings/show.html.erb within layouts/application (Duration: 0.2ms | Allocations: 52)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/_navbar.html.erb:1
+  Rendered layouts/_navbar.html.erb (Duration: 1.5ms | Allocations: 976)
+Completed 200 OK in 10ms (Views: 7.5ms | ActiveRecord: 0.5ms | Allocations: 6296)
+
+
+Started GET "/listings" for ::1 at 2020-03-04 17:34:37 +1100
+Processing by ListingsController#index as HTML
+  Rendering listings/index.html.erb within layouts/application
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/listings/index.html.erb:3
+  [1m[36mListing Load (2.1ms)[0m  [1m[34mSELECT "listings".* FROM "listings"[0m
+  ↳ app/views/listings/index.html.erb:7
+  Rendered listings/index.html.erb within layouts/application (Duration: 9.9ms | Allocations: 2704)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navbar.html.erb (Duration: 0.2ms | Allocations: 48)
+Completed 200 OK in 21ms (Views: 16.3ms | ActiveRecord: 3.2ms | Allocations: 7351)
+
+
+Started GET "/listings/new" for ::1 at 2020-03-04 17:34:50 +1100
+  [1m[35m (1.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ListingsController#new as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering listings/new.html.erb within layouts/application
+  Rendered listings/_form.html.erb (Duration: 37.8ms | Allocations: 5142)
+  Rendered listings/new.html.erb within layouts/application (Duration: 43.3ms | Allocations: 5777)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navbar.html.erb (Duration: 2.4ms | Allocations: 258)
+Completed 200 OK in 210ms (Views: 117.0ms | ActiveRecord: 15.3ms | Allocations: 32145)
+
+
+Started GET "/listings" for ::1 at 2020-03-04 17:34:52 +1100
+Processing by ListingsController#index as HTML
+  Rendering listings/index.html.erb within layouts/application
+  [1m[36mUser Load (3.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/listings/index.html.erb:3
+  [1m[36mListing Load (1.2ms)[0m  [1m[34mSELECT "listings".* FROM "listings"[0m
+  ↳ app/views/listings/index.html.erb:7
+  Rendered listings/index.html.erb within layouts/application (Duration: 15.7ms | Allocations: 3084)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navbar.html.erb (Duration: 0.3ms | Allocations: 49)
+Completed 200 OK in 33ms (Views: 24.3ms | ActiveRecord: 4.9ms | Allocations: 7913)
+
+
+Started GET "/listings/new" for ::1 at 2020-03-04 17:34:53 +1100
+Processing by ListingsController#new as HTML
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering listings/new.html.erb within layouts/application
+  Rendered listings/_form.html.erb (Duration: 5.4ms | Allocations: 1569)
+  Rendered listings/new.html.erb within layouts/application (Duration: 6.2ms | Allocations: 1668)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navbar.html.erb (Duration: 0.1ms | Allocations: 58)
+Completed 200 OK in 26ms (Views: 22.7ms | ActiveRecord: 0.9ms | Allocations: 7794)
+
+
+Started POST "/listings" for ::1 at 2020-03-04 17:34:59 +1100
+Processing by ListingsController#create as HTML
+  Parameters: {"authenticity_token"=>"liekL7WU11/htgoQbvJ1F0NXpE0Ga4Hqr50P1sKqFHecdjT7oGhtcbfsPHoAaYCqDxWrIFjwj2HyOgXrD5rbzQ==", "listing"=>{"name"=>"qasqaqaqa", "breed"=>"aqaqaq", "price"=>"aqqaqaq", "documentation"=>"qaqaqa", "description"=>"qaqaqa"}, "commit"=>"Create Listing"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/listings_controller.rb:20:in `create'
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/listings_controller.rb:20:in `create'
+  [1m[36mListing Create (1.3ms)[0m  [1m[32mINSERT INTO "listings" ("name", "breed", "price", "documentation", "description", "created_at", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["name", "qasqaqaqa"], ["breed", "aqaqaq"], ["price", 0], ["documentation", "qaqaqa"], ["description", "qaqaqa"], ["created_at", "2020-03-04 06:34:59.066008"], ["updated_at", "2020-03-04 06:34:59.066008"], ["user_id", 1]]
+  ↳ app/controllers/listings_controller.rb:20:in `create'
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/listings_controller.rb:20:in `create'
+Redirected to http://localhost:3000/listings/12
+Completed 302 Found in 24ms (ActiveRecord: 2.9ms | Allocations: 9132)
+
+
+Started GET "/listings/12" for ::1 at 2020-03-04 17:34:59 +1100
+Processing by ListingsController#show as HTML
+  Parameters: {"id"=>"12"}
+  [1m[36mListing Load (0.2ms)[0m  [1m[34mSELECT "listings".* FROM "listings" WHERE "listings"."id" = $1 LIMIT $2[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/controllers/listings_controller.rb:52:in `find_listing'
+  Rendering listings/show.html.erb within layouts/application
+  Rendered listings/show.html.erb within layouts/application (Duration: 0.9ms | Allocations: 242)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/_navbar.html.erb:1
+  Rendered layouts/_navbar.html.erb (Duration: 2.4ms | Allocations: 979)
+Completed 200 OK in 12ms (Views: 8.7ms | ActiveRecord: 0.7ms | Allocations: 6649)
+
+
+Started GET "/listings" for ::1 at 2020-03-04 17:35:01 +1100
+Processing by ListingsController#index as HTML
+  Rendering listings/index.html.erb within layouts/application
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/listings/index.html.erb:3
+  [1m[36mListing Load (0.7ms)[0m  [1m[34mSELECT "listings".* FROM "listings"[0m
+  ↳ app/views/listings/index.html.erb:7
+  Rendered listings/index.html.erb within layouts/application (Duration: 9.2ms | Allocations: 2846)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navbar.html.erb (Duration: 0.1ms | Allocations: 48)
+Completed 200 OK in 21ms (Views: 17.5ms | ActiveRecord: 1.4ms | Allocations: 7510)
+
+
