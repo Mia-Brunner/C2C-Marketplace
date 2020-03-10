@@ -6,7 +6,7 @@
   display: flex;
   margin-top: 48px;
   min-height: 500px;
-  background-color: #FBEAFF;
+  background-color: rgb(231, 229, 229);
   
   .actions{
     width: 150px;
@@ -19,7 +19,7 @@
 
     .card-title{
       font-family: 'PT Sans', sans-serif;
-      font-size: 18px;
+      font-size: 20px;
     }
     .card-text{
       font-family: 'PT Sans', sans-serif;
@@ -53,6 +53,30 @@
 }
 
 .container{
-  background-color: #FBEAFF;
+  background-color: rgb(255, 255, 255);
+
+  
   
 }
+.image{
+  text-align: center;
+  margin-top: 20px;
+  margin-left: -50px;
+}
+
+.back-button{
+    width: 25%;
+    padding: 0.5rem 1rem;
+    font-size: 12px;
+    letter-spacing: 5px;
+    background-color: rgb(231, 230, 229); 
+    cursor: pointer;
+    outline: none;
+    border: none;
+    transition: all .3s ease-out;
+    color: #443535; 
+    font-family: 'PT Sans', sans-serif;
+  }
+  .back-button:hover{
+    background-color: rgb(65, 65, 65);
+  }

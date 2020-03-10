@@ -41,16 +41,17 @@ nav.black{
   line-height: 20px;
   color: #262626;
   padding: 5px 20px;
-  font-family: 'Roboto', sans-serif;
   text-decoration: none;
   text-transform: uppercase;
-  transition: .5s;
+  font-size: 10px;
+  transition: all .3s ease-out;
+  font-family: 'PT Sans', sans-serif;
 }
 
 .navnav ul li:hover
 {
   color: #ffffff;
-  background: #4c96d7;
+  background: #a8a8a8;
 }
 
 nav.black ul li a{

@@ -5,7 +5,7 @@
       <img src="https://i.imgur.com/q6d99zK.jpg" alt="">
     </div>
     <ul>
-      <li><a href="#" class="active">Home</a></li>
+      <li><%= link_to 'Home', dashboard_index_path %></li>
       <li><%= link_to 'Listings', listings_path %></li>
       <li><%= link_to 'Profile', edit_user_registration_path %></li>
       <li><%= link_to 'Sign Out', destroy_user_session_path, method: :delete %></li>

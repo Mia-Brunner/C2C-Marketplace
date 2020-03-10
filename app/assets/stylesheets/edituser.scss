@@ -4,13 +4,18 @@
   min-height: 150px;
 }
   .editleft{
-    width: 110px;
-    border: 1px solid #dbdbdb;  
+    width: 500px;
+    background: url(https://img.apmcdn.org/64f5f7e459a44bba9ff0d92d149a407e95e71e34/uncropped/ffe172-20181106-dogs.jpg);
+    
   }
   .editright{
     flex: 1;
-    border: 1px solid #dbdbdb;
+  
     border-left:none;
+    font-size: 12px;
+    font-family: 'PT Sans', sans-serif;
+    margin-right: 20px;
+    
   }
 
 .col-form-label
@@ -26,20 +31,23 @@ margin-right: 10px;
   text-align: center;
   background: white
 }
-
+.form-control{
+  font-size: 10px;
+}
 
 .submitedit{
   width: 20%;
   padding: 0.5rem 1rem;
-  font-size: 12px;
+  font-size: 10px;
   letter-spacing: 5px;
-  background-color: #0081CF; 
+  background-color: rgb(238, 157, 139); 
   cursor: pointer;
   outline: none;
   border: none;
   transition: .3s;
   color: whitesmoke; 
   font-family: 'PT Sans', sans-serif;
+  margin-right: 150px;
 }
 
 .submitedit:hover{

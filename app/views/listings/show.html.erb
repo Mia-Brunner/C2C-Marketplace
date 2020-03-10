@@ -1,40 +1,43 @@
-<%= link_to 'Back', listings_path %>
+
 
 
 
 
 <div class="container">
   <div class="row">
-    <div class="col-6">
-     <% (0...@listing.images.count).each do |image| %>
-      <div style="width:400px; height:300px;">
-        <%= image_tag(@listing.thumbnail(image)) %>
-        </div>
-      <% end %>
-    </div>
-  <div class="col">
-     <div class="card text-center" style="width: 20rem;">
-      <div class="card-body">
-        <h2 class="card-title"><%= @listing.name %></h2>
-        <h4 class="card-text">Breed: <%= @listing.breed %></h4>
-        <h4 class="card-text">$<%= @listing.price %></h4>
-        <p class="card-text"> Documentation: <%= @listing.documentation %></p>
-        <p class="card-text"><%= @listing.description%></p>
-	<a class="button" href="#popup1">Contact Seller</a>
-</div>
+    <div class="col">
+       <div class="card text-center" style="width: 20rem;">
+          <div class="col-6">
+            <% (0...@listing.images.count).each do |image| %>
+              <div class='image' style="width:400px; height:300px;">
+                <%= image_tag(@listing.thumbnail(image)) %>
+              </div>
+            <% end %>
+          </div>
+          <div class="card-body">
+            <h2 class="card-title"><%= @listing.name %></h2>
+            <h4 class="card-text">Breed: <%= @listing.breed %></h4>
+            <h4 class="card-text">$<%= @listing.price %></h4>
+            <p class="card-text"> Documentation: <%= @listing.documentation %></p>
+            <p class="card-text"><%= @listing.description%></p>
+	          <a class="button" href="#popup1">Contact Seller</a>
+          </div>
 
-<div id="popup1" class="overlay">
-	<div class="popup">
-		<h2>Seller Info</h2>
-		<a class="close" href="#">&times;</a>
-		<div class="content">
-			<p><%= @listing.user.firstname %> <%=@listing.user.lastname%></p>
-      <p><%= @listing.user.email %></p>
-      <p><%= @listing.user.location %></p>
-      <p><%= @listing.user.phone %></p></div>
-	</div>
-</div>
+          <div id="popup1" class="overlay">
+	          <div class="popup">
+              <h2>Seller Info</h2>
+              <a class="close" href="#">&times;</a>
+              <div class="content">
+                <p><%= @listing.user.firstname %> <%=@listing.user.lastname%></p>
+                <p><%= @listing.user.email %></p>
+                <p><%= @listing.user.location %></p>
+                <p><%= @listing.user.phone %></p></div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </div>
+  <div class='back-button'>
+    <%= link_to 'Back to Listings', listings_path %>
   </div>
