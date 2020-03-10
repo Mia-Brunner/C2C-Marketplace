@@ -1,0 +1,28 @@
+.user-edit-page{
+  display: flex;
+  margin-top: 10px;
+  min-height: 150px;
+}
+  .editleft{
+    width: 110px;
+    border: 1px solid #dbdbdb;  
+  }
+  .editright{
+    flex: 1;
+    border: 1px solid #dbdbdb;
+    border-left:none;
+  }
+
+.col-form-label
+{
+  text-align: right;
+}
+
+.editsubmit {
+text-align: right;
+margin-right: 10px;
+}
+.button_to {
+  text-align: center;
+  background: white
+}
