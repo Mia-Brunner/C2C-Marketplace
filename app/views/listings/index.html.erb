@@ -1,23 +1,41 @@
-<h1> All Listings </h1>
 
-<% if user_signed_in? %>
-<%= link_to 'Create New Listing', new_listing_path %>
-<% end %>
 
-<% @listings.each do |listing| %>
-  <p>
-    <%= listing.name %>
-    <%= listing.breed %>
-    <%= listing.price %>
-    <small>
-    Listing Created: <%= time_ago_in_words(listing.created_at) %> ago
-    Last Updated: <%= time_ago_in_words(listing.updated_at) %> ago.
-    </small>
-    <%= link_to 'View', listing_path(listing) %>     
-    <% if user_signed_in? && listing.user_id == current_user.id %>
-      <%= link_to 'Edit', edit_listing_path(listing) %> 
-      <%= link_to 'Delete', listing_path(listing), method: :delete, data: {confirm: 'Are you sure?'} %>
+
+<div class="listing-show">
+  <div class="actions">
+    <div class="nav flex-column nav-pills" role="tablist" aria-orientation="vertical">
+    <% if user_signed_in? %>
+    <%= link_to 'Create New Listing', new_listing_path %>
     <% end %>
-  </p>
+    </div>
+  </div>
+   <div class="details">
+    <% @listings.each do |listing| %>
+      <div class="card mb-3 text-center" >
+      <img class="card-img-top" src="..." alt="Card image cap">
+      <div class="card-body">
+      <h5 class="card-title"><%= listing.name %></h5>
+      <p class="card-text"><%= listing.breed %></p>$
+      <%= listing.price %>
+      </div>
+    <div>
+    <a href="#" class="card-link"><%= link_to 'View', listing_path(listing) %></a>
+    <% if user_signed_in? && listing.user_id == current_user.id %>
+        ||<a href="#" class="card-link"><%= link_to 'Edit', edit_listing_path(listing) %> </a>
+        ||<a href="#" class="card-link"><%= link_to 'Delete', listing_path(listing), method: :delete, data: {confirm: 'Are you sure?'} %></a>
+    <% end %>
+
+</div>
+  
+  <div class="card-footer">
+    <small class="text-muted">Listing Created: <%= time_ago_in_words(listing.created_at) %> ago
+    </small>
+  </div>
+</div>
 
 <% end %>
+
+  </div>
+</div>
+
+

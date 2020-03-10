@@ -1,18 +1,32 @@
-<h1><%= @listing.name %></h1>
-<h3><%= @listing.breed %></h3>
-<h3><%= @listing.price %></h3>
-<p><%= @listing.documentation %></p>
-<p><%= @listing.description%></p>
+<%= link_to 'Back', listings_path %>
+
 
 <p><%= @listing.user.firstname %></p>
 <p><%= @listing.user.email %></p>
 <h1><%= @listing.user.phone %></h1>
 
-<% (0...@listing.images.count).each do |image| %>
-<div style="width:300px; height:300px;">
-  <%= image_tag(@listing.thumbnail(image)) %>
+
+<div class="container">
+  <div class="row">
+    <div class="col-6">
+     <% (0...@listing.images.count).each do |image| %>
+      <div style="width:400px; height:300px;">
+        <%= image_tag(@listing.thumbnail(image)) %>
+        </div>
+      <% end %>
+    </div>
+  <div class="col">
+     <div class="card text-center" style="width: 20rem;">
+      <div class="card-body">
+        <h2 class="card-title"><%= @listing.name %></h2>
+        <h4 class="card-text">Breed: <%= @listing.breed %></h4>
+        <h4 class="card-text">$<%= @listing.price %></h4>
+        <p class="card-text"> Documentation: <%= @listing.documentation %></p>
+        <p class="card-text"><%= @listing.description%></p>
+        <a href="#" class="btn btn-primary">Contact Seller</a>
+      </div>
+    </div>
   </div>
-<% end %>
+  </div>
+</div>
 
-
-<%= link_to 'Back', listings_path %>

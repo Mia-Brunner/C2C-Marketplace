@@ -1,9 +1,36 @@
-<h2>Sign up</h2>
 
-<%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: {class: "newform"}) do |f| %>
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
+  <title>Contact Me</title>
+  <link rel="stylesheet" href="custom.css.scss">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+    integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous" />
+  <link href="https://fonts.googleapis.com/css?family=Quicksand&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Bowlby+One&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:700|PT+Sans&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+    <div class="container">
+      <div class="contact-box">
+        <div class="left"></div>
+        <div class="right">
+          <h2>REGISTER</h2>
+          
+          <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: {class: "newform"}) do |f| %>
       <hr>
       <%= render "devise/shared/error_messages", resource: resource %>
-
 
     <div class="field">
       <%= f.label :firstname, "First Name" %><br />
@@ -33,13 +60,19 @@
       <%= f.password_field :password, autocomplete: "new-password", class:"newlabel" %>
     </div>
 
-    <div class="field">
+
+    <div type="text" class="field" placeholder="PASSWORD">
       <%= f.label :password_confirmation %><br />
       <%= f.password_field :password_confirmation, autocomplete: "new-password", class:"newlabel" %>
     </div>
     <br>    
-    <div class="actions">
-      <%= f.submit "Sign up", class: "newbutton" %>
+    
+          <button class="btn actions"><%= f.submit "SIGN UP" %></button>
+    
+    <% end %>
+        </div>
+      </div>
     </div>
-<% end %>
+  </div>
 
+</html>
