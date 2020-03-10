@@ -1,11 +1,28 @@
+  <% if user_signed_in? %>
+  
   <nav class="navnav">
     <div class="logo">
       <img src="https://i.imgur.com/q6d99zK.jpg" alt="">
     </div>
     <ul>
       <li><a href="#" class="active">Home</a></li>
-      <li><a href="#">Profile</a></li>
-      <li><a href="#">Login</a></li>
-      <li><a href="#">Register</a></li>
+      <li><%= link_to 'Listings', listings_path %></li>
+      <li><%= link_to 'Profile', edit_user_registration_path %></li>
+      <li><%= link_to 'Sign Out', destroy_user_session_path, method: :delete %></li>
     </ul>
   </nav>
+
+<% else %>
+
+  <nav class="navnav">
+    <div class="logo">
+      <img src="https://i.imgur.com/q6d99zK.jpg" alt="">
+    </div>
+    <ul>
+      <li><%= link_to 'Home', dashboard_index_path %></li>
+      <li><%= link_to 'Listings', listings_path %></li>
+      <li><%= link_to 'Login', new_user_session_path %></li>
+      <li><%= link_to 'Sign Up', new_user_registration_path %></li>
+    </ul>
+  </nav>
+<% end %>
