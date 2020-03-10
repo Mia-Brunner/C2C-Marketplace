@@ -1,9 +1,5 @@
 
-
-
-
-
-<div class="container">
+<div class="show-container">
   <div class="row">
     <div class="col">
        <div class="card text-center" style="width: 20rem;">
@@ -20,9 +16,14 @@
             <h4 class="card-text">$<%= @listing.price %></h4>
             <p class="card-text"> Documentation: <%= @listing.documentation %></p>
             <p class="card-text"><%= @listing.description%></p>
-	          <a class="button" href="#popup1">Contact Seller</a>
+	          <% if user_signed_in? %>
+            <a class="button" href="#popup1">Contact Seller</a>
+            <% else  %>
+            <a><%= link_to 'Log in to see seller details', new_user_session_path, class: "btn btn-primary" %></a>
+         <% end %>
           </div>
 
+     
           <div id="popup1" class="overlay">
 	          <div class="popup">
               <h2>Seller Info</h2>

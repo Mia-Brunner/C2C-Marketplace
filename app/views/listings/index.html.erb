@@ -1,8 +1,10 @@
-<div class="listing-show">
+<div class="listing-index-show">
   <div class="actions">
     <div class="nav flex-column nav-pills" role="tablist" aria-orientation="vertical">
     <% if user_signed_in? %>
     <%= link_to 'Create New Listing', new_listing_path, class: "btn btn-primary"  %>
+    <% else %>
+    <a><%= link_to 'Log in to create a new listing', new_user_session_path, class: "btn btn-primary" %></a>
     <% end %>
     </div>
   </div>

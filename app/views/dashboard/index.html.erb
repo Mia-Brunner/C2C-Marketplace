@@ -1,7 +1,12 @@
 <body class="dashboardbody">
   <header id="showcase">
     <h1>Dog Marketplace</h1>
-    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Enim magni tenetur ad similique quibusdam rem!</p>
+    <p>FINDING A HOME FOR YOUR FURRY FRIENDS</p>
+
+    <% if user_signed_in? %>
+     <%= link_to 'View Listings', listings_path, class: "dashbutton1"  %>
+    <% else %>
     <a><%= link_to 'Sign Up', new_user_registration_path, class: 'dashbutton1' %></a>
+    <% end %>
   </header>
 </body>
