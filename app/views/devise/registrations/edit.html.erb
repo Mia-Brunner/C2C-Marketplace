@@ -41,15 +41,16 @@
   </div>
   <div class="col-sm-3"></div>
     <div class="editsubmit">
-    <%= f.submit "Update", class: 'btn btn-primary' %>
+    <%= f.submit "Update", class: 'submitedit' %>
   </div>
+
 <hr>
 
  
 <% end %>
 
 
-<p><%= button_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete, class: "btn  btn-outline-danger" %></p>
+<p><%= button_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete, class: "canceledit" %></p>
   </div>
 </div>
 
