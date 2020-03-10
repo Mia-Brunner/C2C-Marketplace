@@ -1,8 +1,11 @@
 <%= link_to 'Back', listings_path %>
 
 
-<p><%= @listing.user.firstname %></p>
-<h1><%= @listing.user.phone %></h1>
+<p><%= @listing.user.firstname %> <%=@listing.user.lastname%></p>
+<p><%= @listing.user.email %></p>
+<p><%= @listing.user.location %></p>
+<p><%= @listing.user.phone %></p>
+
 
 
 <div class="container">
