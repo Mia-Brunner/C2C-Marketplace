@@ -5,6 +5,7 @@
 .listing-show{
   display: flex;
   min-height: 500px;
+  background-color: #FBEAFF;
   
   .actions{
     width: 150px;
@@ -14,6 +15,20 @@
     flex: 1;
     border: 1px solid #dbdbdb;
     border-left:none;
+
+    .card-title{
+      font-family: 'PT Sans', sans-serif;
+      font-size: 18px;
+    }
+    .card-text{
+      font-family: 'PT Sans', sans-serif;
+      font-size: 16px;
+    }
+
+    .card{
+      width: 400px;
+      display: inline-grid;
+    }
   }
 }
 
@@ -34,4 +49,9 @@
     border-left: 2px solid;
     font-weight: 600;
   }
+}
+
+.container{
+  background-color: #FBEAFF;
+  
 }

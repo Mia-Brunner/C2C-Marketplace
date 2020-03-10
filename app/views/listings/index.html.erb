@@ -14,8 +14,8 @@
       <div class="card mb-3 text-center" >
       <div class="card-body">
       <h5 class="card-title"><%= listing.name %></h5>
-      <p class="card-text"><%= listing.breed %></p>$
-      <%= listing.price %>
+      <p class="card-text"><%= listing.breed %></p>
+      <p class="card-text">$<%= listing.price %></p>
       </div>
     <div>
     <a href="#" class="card-link"><%= link_to 'View', listing_path(listing) %></a>

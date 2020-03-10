@@ -1,11 +1,6 @@
 <%= link_to 'Back', listings_path %>
 
 
-<p><%= @listing.user.firstname %> <%=@listing.user.lastname%></p>
-<p><%= @listing.user.email %></p>
-<p><%= @listing.user.location %></p>
-<p><%= @listing.user.phone %></p>
-
 
 
 <div class="container">
@@ -25,10 +20,21 @@
         <h4 class="card-text">$<%= @listing.price %></h4>
         <p class="card-text"> Documentation: <%= @listing.documentation %></p>
         <p class="card-text"><%= @listing.description%></p>
-        <a href="#" class="btn btn-primary">Contact Seller</a>
+	<a class="button" href="#popup1">Contact Seller</a>
+</div>
+
+<div id="popup1" class="overlay">
+	<div class="popup">
+		<h2>Seller Info</h2>
+		<a class="close" href="#">&times;</a>
+		<div class="content">
+			<p><%= @listing.user.firstname %> <%=@listing.user.lastname%></p>
+      <p><%= @listing.user.email %></p>
+      <p><%= @listing.user.location %></p>
+      <p><%= @listing.user.phone %></p></div>
+	</div>
+</div>
       </div>
     </div>
   </div>
   </div>
-</div>
-
