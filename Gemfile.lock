@@ -91,8 +91,6 @@ GEM
     ffi (1.12.2)
     globalid (0.4.2)
       activesupport (>= 4.2.0)
-    graphicsmagick (1.0.6)
-      subexec
     i18n (1.8.2)
       concurrent-ruby (~> 1.0)
     jbuilder (2.10.0)
@@ -188,7 +186,6 @@ GEM
       actionpack (>= 4.0)
       activesupport (>= 4.0)
       sprockets (>= 3.0.0)
-    subexec (0.2.3)
     thor (1.0.1)
     thread_safe (0.3.6)
     tilt (2.0.10)
@@ -228,7 +225,6 @@ DEPENDENCIES
   byebug
   capybara (>= 2.15)
   devise
-  graphicsmagick
   jbuilder (~> 2.7)
   listen (>= 3.0.5, < 3.2)
   mini_magick
