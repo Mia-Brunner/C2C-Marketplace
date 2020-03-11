@@ -111,7 +111,7 @@ Can only have contact info shared with registered users
 [New-User](https://i.imgur.com/MQw7xVC.png)
 
 
-### An ERD for your app
+### An ERD for your app/Provide your database schema design
 [ERD](https://i.imgur.com/mnANPjB.png)
 
 USER - Has many Listings 
@@ -137,14 +137,38 @@ The framework rails is a powerful tool for abstraction. There are many pre-writt
 ### Detail any third party services that your app will use
 
 #### Heroku 
+Cloud hosting platform, enables deployment to production. For this application heroku was used to deploy the application to production.
+
 #### AWS 
-#### Devise 
-#### Bootstrap 
-
-
-
+Amazon Web Services S3 provides hosting for images, will be used to allow users to attach an image to their post. 
 
 ### Describe your projects models in terms of the relationships (active record associations) they have with each other
+
+USER 
+```
+has_many :listings
+```
+
+LISTING 
+```
+belongs_to :user
+has_many_attached :images
+```
+
 ### Discuss the database relations to be implemented in your application
-### Provide your database schema design
+
+#### One-to-many-relationships
+Using a foreign key matched to the primary key, occurs when each record in the first table corresponds to one or more records in another table, but each record in the second table only corresponds to one record in the first.
+
+In this instance a single user has many listings and each listing can have many attached images. Each listing can only belong to one user. 
+
 ### Describe the way tasks are allocated and tracked in your project
+
+For this project I have been using trello to track my workflow with specific due dates written for each task. Below you can see the progress of my workflow. 
+
+[trello1](https://i.imgur.com/gjBmmeR.jpg)
+
+[trello2](https://i.imgur.com/Itz881l.jpg)
+
+[trello2](https://i.imgur.com/wpKG36Z.jpg)
+
