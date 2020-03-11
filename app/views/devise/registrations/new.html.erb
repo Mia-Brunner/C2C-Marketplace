@@ -23,43 +23,39 @@
           <hr>
           <%= render "devise/shared/error_messages", resource: resource %>
         <br>
-        <div class="moverightplease">
-          <div class="form-group row">
-          </div>
-        </div>
+
         <div class="form-group row">
-          <%= f.label :firstname, "First Name"%><br>
+          <%= f.label :firstname, "First Name", class: 'col-sm-3 col-form-label'%><br>
           <div class="col-sm-9">
           <%= f.text_field :firstname, autofocus: true, autocomplete: "firstname", class: 'form-control' %>
          </div>
         </div>
 
         <div class="form-group row">
-          <%= f.label :lastname, "Last Name" %><br />
+          <%= f.label :lastname, "Last Name", class: 'col-sm-3 col-form-label' %><br />
           <div class="col-sm-9">
           <%= f.text_field :lastname, autofocus: true, autocomplete: "lastname", class: 'form-control' %>
         </div>
         </div>
 
         <div class="form-group row">
-        <%= f.label :phone, "Phone Number" %><br />
+        <%= f.label :phone, "Phone Number", class: 'col-sm-3 col-form-label' %><br />
         <div class="col-sm-9">
         <%= f.text_field :phone, autofocus: true, autocomplete: "phone", class: 'form-control' %>
       </div>
       </div>
 
       <div class="form-group row">
-        <%= f.label :email %><br />
+        <%= f.label :email, class: 'col-sm-3 col-form-label' %><br />
         <div class="col-sm-9">
         <%= f.email_field :email, autofocus: true, autocomplete: "email", class: 'form-control' %>
       </div>
       </div>
 
       <div class="form-group row">
-        <%= f.label :password %>
+        <%= f.label :password, class: 'col-sm-3 col-form-label' %><br />
         <% if @minimum_password_length %>
-        <em>(<%= @minimum_password_length %> characters minimum)</em>
-        <% end %><br />
+        <% end %>
         <div class="col-sm-9">
         <%= f.password_field :password, autocomplete: "new-password", class: 'form-control' %>
       </div>
@@ -67,7 +63,7 @@
     
 
       <div type="text" class="form-group row" placeholder="PASSWORD">
-        <%= f.label :password_confirmation %><br />
+        <%= f.label :password_confirmation, class: 'col-sm-3 col-form-label' %><br />
         <div class="col-sm-9">
         <%= f.password_field :password_confirmation, autocomplete: "new-password", class: 'form-control' %>
       </div>

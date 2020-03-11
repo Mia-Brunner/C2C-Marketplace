@@ -39,7 +39,13 @@ This app allows for privacy where seller information is only disclosed to those 
 ![Sitemap](https://i.imgur.com/GtP19vz.png)
 
 ### Screenshots
+![Screenshot1](https://i.imgur.com/eYmjcBZ.jpg)
+![Screenshot2](https://i.imgur.com/Ppg1mlr.png)
+![Screenshot3](https://i.imgur.com/IwR8Vva.jpg)
+
 ### Target audience
+
+The target audience for this app is for those who wish to purchase or sell their pet dogs. 
 
 ### Tech stack (e.g. html, css, deployment platform, etc)
 ##### VScode: 

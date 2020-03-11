@@ -2,7 +2,7 @@
   margin: 0;
   font-family: 'PT Sans', sans-serif;
   font-size: 17px;
-  color: #dddad6;
+  color: #ffffff;
   line-height: 1.6;
   
 }
@@ -18,17 +18,19 @@
   align-items: center;
   text-align: center;
   padding: 0 20px;
+  filter: brightness(80%);
 
 }
 
-#showcase h1{
+.dashtitle{
   font-size: 50px;
   line-height: 1.2;
 
 }
 
-#showcase p{
+.dashtext{
   font-size: 20px;
+
 }
 
 #showcase .dashbutton1{
