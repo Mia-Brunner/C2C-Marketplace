@@ -1,6 +1,7 @@
 // Place all the styles related to the Listings controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
+@import url('https://fonts.googleapis.com/css?family=Roboto:700&display=swap');
 
 
 // INDEX
@@ -8,36 +9,54 @@
   display: flex;
   margin-top: 48px;
   min-height: 500px;
-  background-color: rgb(231, 229, 229);
+  background-color: rgb(241, 252, 250);
+  box-sizing: border-box;
   
   .actions{
     width: 150px;
     border: 1px solid #dbdbdb;  
+  
   }
   .details{
     flex: 1;
     border: 1px solid #dbdbdb;
     border-left:none;
 
+    .card-body{
+      background: rgb(231, 243, 236);
+    }
+
     .card-title{
       font-family: 'PT Sans', sans-serif;
-      font-size: 20px;
+      font-size: 18px;
     }
     .card-text{
       font-family: 'PT Sans', sans-serif;
-      font-size: 16px;
+      font-size: 12px;
+    }
+    .card-link{
+      font-family: 'PT Sans', sans-serif;
+      font-size: 10px;
     }
 
     .card{
       width: 400px;
       display: inline-grid;
     }
+
+    .card-footer{
+      font-family: 'PT Sans', sans-serif;
+      font-size: 10px;
+    }
   }
 }
 
 .btn-primary{
-  background: rgb(88, 88, 88);
+  background: rgb(233, 108, 108);
   border: none;
+  font-family: 'PT Sans', sans-serif;
+  font-size: 16px;
+  
 }
 
 .btn-primary:hover{

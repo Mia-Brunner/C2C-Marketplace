@@ -1,53 +1,70 @@
 
-<div class="card-body px-lg-5 pt-0">
+<div class="new-listing-page">
+        <div class="editright">
+<h2>Add your dogs details below</h2>
 
       
-                <%= form_with(model: listing, local: true) do |form| %>
-                  <% if listing.errors.any? %>
-                    <div id="error_explanation">
-                      <h2><%= pluralize(listing.errors.count, "error") %> prohibited this listing from being saved:</h2>
-                      <ul>
-                        <% listing.errors.full_messages.each do |message| %>
-                          <li><%= message %></li>
-                        <% end %>
-                      </ul>
-                    </div>
-                  <% end %>
+  <%= form_with(model: listing, local: true) do |form| %>
+    <% if listing.errors.any? %>
+      <div id="error_explanation">
+        <h2><%= pluralize(listing.errors.count, "error") %> prohibited this listing from being saved:</h2>
+        <ul>
+          <% listing.errors.full_messages.each do |message| %>
+            <li><%= message %></li>
+          <% end %>
+        </ul>
+      </div>
+    <% end %>
 
-                  <div class="field">
-                    <%= form.label :name %>
-                    <%= form.text_field :name %>
-                  </div>
+    <div class="form-group row">
+      <%= form.label :name %>
+      <div class="col-sm-9">
+      <%= form.text_field :name, class: 'form-control' %>
+      </div>
+    </div>
 
-                  <div class="field">
-                    <%= form.label :breed %>
-                    <%= form.text_field :breed %>
-                  </div>
+    <div class="form-group row">
+      <%= form.label :breed %>
+      <div class="col-sm-9">
+      <%= form.text_field :breed, class: 'form-control' %>
+      </div>
+    </div>
 
-                  <div class="field">
-                    <%= form.label :price %>
-                    <%= form.text_area :price %>
-                  </div>
+    <div class="form-group row">
+      <%= form.label :price %>
+      <div class="col-sm-9">
+      <%= form.text_area :price, class: 'form-control' %>
+      <div>
+    </div>
 
-                  <div class="field">
-                    <%= form.label :documentation %>
-                    <%= form.text_area :documentation %>
-                   </div>
+    <div class="form-group row1">
+      <%= form.label :documentation %>
+      <div class="col-sm-9">
+      <%= form.text_area :documentation, class: 'form-control', placeholder: "Please write here if de-sexed, vaccinated or microchipped" %>
+      </div>
+      </div>
 
-                  <div class="field">
-                    <%= form.label :description %>
-                    <%= form.text_area :description %>
-                  </div>
+    <div class="form-group row1">
+      <%= form.label :description %>
+      <div class="col-sm-9">
+      <%= form.text_area :description, class: 'form-control' %>
+      </div>
+    </div>
 
-                  <div class="field">
-                    <%= form.label :images %>
-                    <%= form.file_field :images, multiple: true %>
-                  </div>
+    <div class="form-group row1">
+      <%= form.label :images %>
+      <div class="col-sm-9">
+      <%= form.file_field :images, multiple: true  %>
+      </div>
+    </div>
 
-                  <div class="actions">
-                    <%= form.submit %>
-                  </div>
-                <% end %>
+    <div class="editsubmit">
+      <%= form.submit 'Create Listing', class:'submitedit' %>
+    </div>
+  <% end %>
 
 </div>
+</div>
+
+
 
