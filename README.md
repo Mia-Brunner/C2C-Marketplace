@@ -186,7 +186,7 @@ LISTING - Belongs to user & Has Many attached images
 
 ### Explain the different high-level components (abstractions) in your app
 
-As seen in the image above, initially when a browser makes a GET/ request the Router will direct this request to the Controller. The Controller is a high level component and is responsible for responding to user input and serves to direct sending and receiving information to and from the Model and the View. The controller is the decision maker. 
+Initially when a browser makes a GET/ request the Router will direct this request to the Controller. The Controller is a high level component and is responsible for responding to user input and serves to direct sending and receiving information to and from the Model and the View. The controller is the decision maker. Rails allows for abstractions to be made with the controller by creating simple methods such as new, update, delete etc. 
 
 When the request reaches the Model, interaction with a selected data source occurs. This is where the applications business logic and the rules to manipulate the data are stored in the Model. The Model creates the relationship between the controller and the data and allows the application to select specific information from the database and is responsible for receiving, storing and retrieving data.
 
@@ -202,10 +202,10 @@ The framework rails is a powerful tool for abstraction. There are many pre-writt
 Cloud hosting platform, enables deployment to production. For this application heroku was used to deploy the application to production as it is free to use for its users.
 
 #### AWS 
-Amazon Web Services S3 provides hosting for images, will be used to allow users to attach an image to their post. 
+Amazon Web Services S3 provides hosting for images, will be used to allow users to attach an image to their post. AWS S3 is also free to use for its users up to a certain limit. 
 
 #### PostgresQL
-Open-source relational database management system. Will be used to store data. 
+Open-source relational database management system. Will be used to store data. This is also free to use for its users and can easily be used as part of a rails application. 
 
 ### Describe your projects models in terms of the relationships (active record associations) they have with each other
 
