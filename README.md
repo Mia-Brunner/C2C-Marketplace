@@ -31,7 +31,7 @@ This app allows for privacy where seller information is only disclosed to those 
 
 3. Devise Authentication: Allows users to create new accounts and ensures that any changes made to the listings can only be done by the authorised user. 
 
-4. Sign In/Sign Out: Only regsitered users have access to and can see the seller contact information if they wish to communicate with the seller. 
+4. Privacy: Only regsitered users have access to and can see the seller contact information if they wish to communicate with the seller. 
 
 ### Sitemap
 
@@ -77,6 +77,9 @@ Amazon Web Services S3 provides hosting for images.
 
 ##### Heroku: 
 Cloud hosting platform, enables deployment to production.
+
+##### PostgresQL:
+Open-source relational database management system.
 
 ### User stories for your app
 
@@ -143,14 +146,36 @@ As a buyer, I want to be able to change and update my password information.
 ### Wireframes for your app
 
 #### Dashboard
+- The dashboard wireframe remained the same for this project with a central background image as the main focus point for the homepage. 
+- A logo was added to the left side of the navigation bar and pushed the tab options of home page, listings page, profile page, and sign out  to the right. 
+- In addition to this wireframe, a title and a blurb was added to the center of the page.
+- An option to 'Log in' is also added in the center if the user is not logged in which changes to 'view listings' if they are logged in. 
+
 ![Dashboard](https://i.imgur.com/26YgDqw.png)
+
 #### Listings Page
+- The listings page remained relatively the same with 3 columns added for each listing.
+- A button was added to the left side of the listing to add the option of adding a listing or logging in first so you can add a listing. 
+
 ![Listings](https://i.imgur.com/9rNZ8aa.png)
+
 #### Single Listing 
+- The layout of the single listing changed dramatically as bootstrap card was used. The card places the image on top half of the card with the listing information below. 
+- To contact the seller a button with a popup feature with seller information is available for users who are logged in, or a link to log in is used. 
+
 ![Single-Listing](https://i.imgur.com/kJ3pGFu.png)
+
 #### Add New Listing
+- To add a new listing a form was created in the center of the page.
+- Form includes name, breed, price, documentation and description. 
+- It also includes the option to upload more than one image 
+- a form submit button creates the new listing 
+
 ![New-Listing](https://i.imgur.com/UdS0eYU.png)
+
 #### User Log In/Registration
+- The new user registration form follows the same template with a user application form or log in form on the right hand side and an image on the left. 
+
 [New-User](https://i.imgur.com/MQw7xVC.png)
 
 
@@ -184,6 +209,9 @@ Cloud hosting platform, enables deployment to production. For this application h
 
 #### AWS 
 Amazon Web Services S3 provides hosting for images, will be used to allow users to attach an image to their post. 
+
+##### PostgresQL:
+Open-source relational database management system. Will be used to store data. 
 
 ### Describe your projects models in terms of the relationships (active record associations) they have with each other
 
