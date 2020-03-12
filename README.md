@@ -4,7 +4,6 @@
 
 There is a gap in the marketplace for buying and selling dogs online in Australia. It is difficult to find dogs that are puppies, or from registered breeders or shelters available online in one website. By building this marketplace application we are creating a commmunity of sellers in one location to allow people to have the access and have the availability to purchase dogs from Australia wide. This application will give users the awareness and the easability to purchase and choose from selected sellers who have created individualised private accounts.  
 
-
 ### Why is it a problem that needs solving?
 
 Currently the Australian market has an abundance of search engines to find, buy and sell animals. However, it is difficult to find a specific website provides this service specifically for dogs. This website allows customers to recieve the best results when it comes to purchasing a new furry friend or finding a new home for them if they need to give them away. 
@@ -39,8 +38,12 @@ This app allows for privacy where seller information is only disclosed to those 
 ![Sitemap](https://i.imgur.com/GtP19vz.png)
 
 ### Screenshots
+
+#### User Log in and User Registration pages
 ![Screenshot1](https://i.imgur.com/eYmjcBZ.jpg)
+#### Create new listing page and Listings display 
 ![Screenshot2](https://i.imgur.com/Ppg1mlr.png)
+#### Dashboard/Homepage and User update password 
 ![Screenshot3](https://i.imgur.com/IwR8Vva.jpg)
 
 ### Target audience
@@ -52,13 +55,13 @@ The target audience for this app is for those who wish to purchase or sell their
 Source-code editor, a code editor redefined and optimized for building and debugging modern web and cloud applications.
 
 ##### Ruby: 
-Dynamic, object-orientated general purpose programming language
+Dynamic, object-orientated general purpose programming language.
 
 ##### HTML: 
-Markup language that is interpreted by the browser
+Markup language that is interpreted by the browser.
 
 ##### CSS: 
-The style sheet language used to specify the presentation of web pages and web applications written in markup languages like HTML such as layouts, colours and fonts. Frameworks
+The style sheet language used to specify the presentation of web pages and web applications written in markup languages like HTML such as layouts, colours and fonts. Frameworks.
 
 ##### Ruby on Rails: 
 MVC framework, provides structure for building an application.
@@ -78,7 +81,6 @@ Cloud hosting platform, enables deployment to production.
 ### User stories for your app
 
 ##### Users from the public:
-
 Can see Home page
 Can see listing offerings
 Can see individual listings 
@@ -88,7 +90,6 @@ Can register as a new user
 Can not see seller information
 
 ##### Users logged in:
-
 Can view their user profile
 Can edit their user profile
 Can delete their user profile
@@ -101,6 +102,42 @@ Can view listing seller information
 Can contact Seller or Buyer
 Can see their listing on the listings page 
 Can only have contact info shared with registered users 
+
+##### User personas
+
+###### Seller:
+- Dog Breeders
+- Shelter owners 
+- Travelling overseas 
+- Moving houses/apartments 
+- Downsizing
+- Job seekers 
+
+###### Buyers:
+- Families
+- Couples
+- Retirees
+- Students
+- Parents
+- Young adults
+
+###### User Stories - Sellers
+As a seller, I want to be able to share dogs I have available for sale to the general public.
+As a seller, I want to keep my information secure from those who do not have a registered account. 
+As a seller, I want to upload multiple photos of the dog I am selling. 
+As a seller, I want to have the option to create multiple listings for multiple dogs i have for sale 
+As a seller, I want to be able to update my information on my listing if I have made any errors. 
+As a seller, I want to be able to delete my listing once my dog has been sold.
+As a seller, I want to be able to delete my listing if I no longer wish to sell my dog. 
+As a seller, I want to create my own profile so that I can share my information with prospective buyers. 
+
+####### User Stories - Buyers
+As a buyer, I want to see all available listings of dogs without having to log in. 
+As a buyer, I want the option to contact a seller if I am interested in purchasing a dog. 
+As a buyer, I want to create my own profile so I can get access to the seller information.
+As a buyer, I want to update and delete my account.
+As a buyer, I want to be able to change and update my password information. 
+
 
 
 ### Wireframes for your app
