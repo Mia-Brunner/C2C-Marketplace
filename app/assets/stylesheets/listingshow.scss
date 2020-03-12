@@ -9,15 +9,17 @@
   display: flex;
   margin-top: 48px;
   margin-left:20px;
+  margin-right: 20px;
   min-height: 500px;
-  background-color: whitesmoke;
+  background-image: url(https://images.pexels.com/photos/1101122/pexels-photo-1101122.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260);
   box-sizing: border-box;
   
   
   .actions{
-    width: 130px;
+    width: 120px;
     border: none;
-    margin-right: 10px;
+    margin-left: 5px;
+    margin-right: 5px;
     margin-top: 10px;  
 
   
@@ -96,6 +98,7 @@
   }
 }
 
+// SINGLE LISTING PAGE
 .show-container{
   background-color: rgb(255, 255, 255);
   margin-left: 35%;

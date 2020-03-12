@@ -35,7 +35,7 @@ This app allows for privacy where seller information is only disclosed to those 
 
 ### Sitemap
 
-![Sitemap](https://i.imgur.com/GtP19vz.png)
+![Sitemap](https://i.imgur.com/GDjZtzs.png)
 
 ### Screenshots
 
@@ -138,10 +138,8 @@ As a seller, I want to create my own profile so that I can share my information 
 As a buyer, I want to see all available listings of dogs without having to log in. 
 As a buyer, I want the option to contact a seller if I am interested in purchasing a dog. 
 As a buyer, I want to create my own profile so I can get access to the seller information.
-As a buyer, I want to update and delete my account.
+As a buyer, I want to be able to delete my account.
 As a buyer, I want to be able to change and update my password information. 
-
-
 
 ### Wireframes for your app
 
@@ -188,29 +186,25 @@ LISTING - Belongs to user & Has Many attached images
 
 ### Explain the different high-level components (abstractions) in your app
 
+As seen in the image above, initially when a browser makes a GET/ request the Router will direct this request to the Controller. The Controller is a high level component and is responsible for responding to user input and serves to direct sending and receiving information to and from the Model and the View. The controller is the decision maker. 
 
- #### ActiveRecord
- 
- Also known as the Model component of MVC. This deals with all communication to the database. ActiveRecord is an abstraction of SQL (a database querying language).This allows for abstraction from writing SQL queries in order to communicate with the database and is a high level component.
+When the request reaches the Model, interaction with a selected data source occurs. This is where the applications business logic and the rules to manipulate the data are stored in the Model. The Model creates the relationship between the controller and the data and allows the application to select specific information from the database and is responsible for receiving, storing and retrieving data.
 
-#### Ruby 
-The ruby programming language is a high level language that compiles down to C, then to binary which is then interpreted by a computer. This type of abstraction allows the user or the programmer more efficiency when writing code as it simplifies the syntax for the user allowing it to be closer to the english language rather than writing in syntax that is difficult to understand. 
+Active record is also known as the Model component of MVC. This deals with all communication to the database. ActiveRecord is an abstraction of SQL (a database querying language). This allows for abstraction from writing SQL queries in order to communicate with the database and is a high level component.
 
-#### Devise
-Devise is a very popular gem used for authentication and user management. This gem allows for lots of abstraction as it removes the need to write your own security settings. This removes the time needed to write ruby methods for encryption and session management. 
+After the Model has retrieved information from the data source, it will go back to controller which will then make a request to the view and integrate the data. The view is another high level component and is responsible for rendering the data in a displayable format for the user to see on their browser. The View acts as the User Interface for the application and the user to interact. The use of HTML, CSS, JS and other gems/bootstrap components allows for abrstractions to be made and easability for the programmer. 
 
-#### Rails
 The framework rails is a powerful tool for abstraction. There are many pre-written and built in methods and functionality that allow for easability for programmers and for software development. It not only abstracts away ruby methods, for example the link_to helper is an abstraction from HTML. It also allows the developer to focus on more specific features of applications and removes the need to write your own scaffolding. 
 
 ### Detail any third party services that your app will use
 
 #### Heroku 
-Cloud hosting platform, enables deployment to production. For this application heroku was used to deploy the application to production.
+Cloud hosting platform, enables deployment to production. For this application heroku was used to deploy the application to production as it is free to use for its users.
 
 #### AWS 
 Amazon Web Services S3 provides hosting for images, will be used to allow users to attach an image to their post. 
 
-##### PostgresQL:
+#### PostgresQL
 Open-source relational database management system. Will be used to store data. 
 
 ### Describe your projects models in terms of the relationships (active record associations) they have with each other
@@ -231,7 +225,7 @@ has_many_attached :images
 #### One-to-many-relationships
 Using a foreign key matched to the primary key, occurs when each record in the first table corresponds to one or more records in another table, but each record in the second table only corresponds to one record in the first.
 
-In this instance a single user has many listings and each listing can have many attached images. Each listing can only belong to one user. 
+In this instance a single user has many listings and each listing can have many attached images. Each listing can only belong to one user. The user ID serves as a foreign key for the Listing and the listing ID serves as a foreign key for the attached images. 
 
 ### Describe the way tasks are allocated and tracked in your project
 
@@ -241,5 +235,9 @@ For this project I have been using trello to track my workflow with specific due
 
 [trello2](https://i.imgur.com/Itz881l.jpg)
 
-[trello2](https://i.imgur.com/wpKG36Z.jpg)
+[trello3](https://i.imgur.com/wpKG36Z.jpg)
+
+[trello4](https://i.imgur.com/0br5Go3.jpg)
+
+
 
